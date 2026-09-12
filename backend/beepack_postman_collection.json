@@ -1,0 +1,335 @@
+{
+  "info": {
+    "name": "Beepack API Collection (Person 2)",
+    "description": "Comprehensive API collection for Beepack ('Beep before you leave'). Covers Frontend & Hardware endpoints, Firebase token verification, item state machine, bag events, reminders, activity feed, and notification settings.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    },
+    {
+      "key": "userId",
+      "value": "usr_demo_01",
+      "type": "string"
+    },
+    {
+      "key": "itemId",
+      "value": "item_01",
+      "type": "string"
+    },
+    {
+      "key": "authToken",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Authentication",
+      "item": [
+        {
+          "name": "Verify Firebase Token / Fetch or Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"idToken\": \"sample_firebase_token\",\n  \"email\": \"alex.rivera@example.com\",\n  \"name\": \"Alex Rivera\",\n  \"avatar\": \"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150\",\n  \"useCase\": \"student\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/auth/verify",
+              "host": ["{{baseUrl}}"],
+              "path": ["auth", "verify"]
+            },
+            "description": "Verifies Firebase ID token, creates or fetches User record, returns auth session token."
+          }
+        }
+      ]
+    },
+    {
+      "name": "User Profile & Schedule",
+      "item": [
+        {
+          "name": "Get User Profile",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{authToken}}" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/users/{{userId}}/profile",
+              "host": ["{{baseUrl}}"],
+              "path": ["users", "{{userId}}", "profile"]
+            },
+            "description": "Retrieves user profile, use case, schedule, and bag items."
+          }
+        },
+        {
+          "name": "Update User Profile & Schedule",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{authToken}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Alex Rivera\",\n  \"username\": \"alex_rivera\",\n  \"avatar\": \"https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150\",\n  \"useCase\": \"student\",\n  \"day\": [\"mon\", \"tue\", \"wed\", \"thu\", \"fri\"],\n  \"startTime\": \"08:30\",\n  \"endTime\": \"17:00\",\n  \"active\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/users/{{userId}}/profile",
+              "host": ["{{baseUrl}}"],
+              "path": ["users", "{{userId}}", "profile"]
+            },
+            "description": "Updates profile details, avatar, useCase, and user schedule."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Items Management",
+      "item": [
+        {
+          "name": "List Items",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{authToken}}" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/items?userId={{userId}}&type=REGULAR",
+              "host": ["{{baseUrl}}"],
+              "path": ["items"],
+              "query": [
+                { "key": "userId", "value": "{{userId}}" },
+                { "key": "type", "value": "REGULAR" }
+              ]
+            },
+            "description": "Lists tracked items for a user, with optional filters for type (REGULAR/TEMPORARY) and status (IN_BAG/REMOVED)."
+          }
+        },
+        {
+          "name": "Create Item",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{authToken}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"name\": \"Math Textbook\",\n  \"rfidUid\": \"A1B2C3D4\",\n  \"type\": \"REGULAR\",\n  \"status\": \"IN_BAG\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items",
+              "host": ["{{baseUrl}}"],
+              "path": ["items"]
+            },
+            "description": "Creates an item in the bag inventory, sets status IN_BAG, logs ITEM_ADDED activity."
+          }
+        },
+        {
+          "name": "Update Item",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "Authorization", "value": "Bearer {{authToken}}" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Calculus Textbook\",\n  \"type\": \"REGULAR\",\n  \"status\": \"IN_BAG\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items/{{itemId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["items", "{{itemId}}"]
+            },
+            "description": "Updates item name, type, rfidUid, or status."
+          }
+        },
+        {
+          "name": "Delete Item",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{authToken}}" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/items/{{itemId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["items", "{{itemId}}"]
+            },
+            "description": "Deletes an item from inventory."
+          }
+        }
+      ]
+    },
+    {
+      "name": "RFID & Hardware Endpoints",
+      "item": [
+        {
+          "name": "Register RFID UID to Item",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"itemId\": \"{{itemId}}\",\n  \"rfidUid\": \"E2801160\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rfid/register",
+              "host": ["{{baseUrl}}"],
+              "path": ["rfid", "register"]
+            },
+            "description": "Associates an RFID tag UID to an existing item."
+          }
+        },
+        {
+          "name": "Hardware Scan (Core State Machine)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"E2801160\",\n  \"timestamp\": \"2026-09-12T10:50:00.000Z\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/rfid/scan",
+              "host": ["{{baseUrl}}"],
+              "path": ["rfid", "scan"]
+            },
+            "description": "ESP32 hardware scan trigger. Flips status IN_BAG <-> REMOVED, writes activity (ITEM_REMOVED or ITEM_RETURNED), and dispatches notification."
+          }
+        },
+        {
+          "name": "Hardware Bag Event (Open / Close)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"event\": \"OPEN\",\n  \"timestamp\": \"2026-09-12T10:50:00.000Z\",\n  \"hardwareId\": \"ESP32-BAG-01\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/bag/event",
+              "host": ["{{baseUrl}}"],
+              "path": ["bag", "event"]
+            },
+            "description": "ESP32 sends bag zipper OPEN/CLOSE event. Logs BAG_OPENED or BAG_CLOSED activity and dispatches notification."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reminders",
+      "item": [
+        {
+          "name": "Create Reminder",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"itemId\": \"{{itemId}}\",\n  \"reminderTime\": \"2026-09-12T12:00:00.000Z\",\n  \"message\": \"Don't forget your Laptop before afternoon lecture!\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/reminders",
+              "host": ["{{baseUrl}}"],
+              "path": ["reminders"]
+            },
+            "description": "Creates a reminder with status PENDING, logs REMINDER_CREATED activity."
+          }
+        },
+        {
+          "name": "List Reminders",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/reminders?userId={{userId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["reminders"],
+              "query": [
+                { "key": "userId", "value": "{{userId}}" }
+              ]
+            },
+            "description": "Lists reminders for a user."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Activity Feed",
+      "item": [
+        {
+          "name": "Get Activity Feed",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/activity?userId={{userId}}&limit=20",
+              "host": ["{{baseUrl}}"],
+              "path": ["activity"],
+              "query": [
+                { "key": "userId", "value": "{{userId}}" },
+                { "key": "limit", "value": "20" }
+              ]
+            },
+            "description": "Returns timeline activity feed, sorted newest to oldest."
+          }
+        }
+      ]
+    },
+    {
+      "name": "Notification Settings",
+      "item": [
+        {
+          "name": "Get Notification Settings",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{baseUrl}}/notifications/settings?userId={{userId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["notifications", "settings"],
+              "query": [
+                { "key": "userId", "value": "{{userId}}" }
+              ]
+            },
+            "description": "Returns notification settings for user."
+          }
+        },
+        {
+          "name": "Update Notification Settings",
+          "request": {
+            "method": "PUT",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"emailEnabled\": true,\n  \"pushEnabled\": true,\n  \"notifyOnBagEvents\": true,\n  \"notifyOnItemRemoved\": true,\n  \"notifyOnReminders\": true\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/notifications/settings",
+              "host": ["{{baseUrl}}"],
+              "path": ["notifications", "settings"]
+            },
+            "description": "Updates user notification preferences."
+          }
+        }
+      ]
+    }
+  ]
+}
