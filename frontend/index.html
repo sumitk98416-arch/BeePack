@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remembering Bag — Never Leave Without What Matters</title>
+  
+  <!-- Geist Typography (Vercel Style) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Custom Futuristic Cyan Dual-Ring Cursor -->
+  <div id="customCursorDot" class="custom-cursor-dot"></div>
+  <div id="customCursorRing" class="custom-cursor-ring"></div>
+
+  <!-- ====================================================================
+       FUTURISTIC INTERACTIVE HERO ZIPPER GATEWAY OVERLAY
+       ==================================================================== -->
+  <div id="zipperGateway" class="zipper-gateway">
+    
+    <!-- Left Flap -->
+    <div class="zipper-flap flap-left" id="flapLeft">
+      <div class="flap-content">
+        <div class="flap-stencil-badge">AUTONOMOUS RFID SENSING</div>
+        <h2 class="flap-big-stencil">REMEMBERING BAG</h2>
+        <p class="flap-sub-info">Passive multi-tag detection runs automatically every time you zip up.</p>
+        <div class="flap-seal">SYSTEM ONLINE</div>
+      </div>
+      <div class="teeth-strip left"></div>
+    </div>
+
+    <!-- Right Flap -->
+    <div class="zipper-flap flap-right" id="flapRight">
+      <div class="flap-content">
+        <div class="flap-stencil-badge">SUB-2S INVENTORY SCAN</div>
+        <h2 class="flap-big-stencil">SMART IOT HARDWARE</h2>
+        <p class="flap-sub-info">Never leave your charger, keys, or ID badge behind.</p>
+        <div class="flap-seal cyan">UNZIP TO OPEN PORTAL</div>
+      </div>
+      <div class="teeth-strip right"></div>
+    </div>
+
+    <!-- Center Zipper Mechanism Assembly -->
+    <div class="zipper-mechanism-center" id="zipperCenterTrack">
+      <div class="zipper-track-line"></div>
+      <div class="zipper-track-glow" id="zipperTrackGlow"></div>
+      
+      <!-- Interactive Clickable / Draggable Zipper Slider & Pull Tab -->
+      <div class="zipper-slider-unit" id="zipperSlider" title="Click or slide down to unzip your bag">
+        <div class="slider-box"></div>
+        
+        <!-- Hanging Pull Tab -->
+        <div class="pull-tab-handle" id="pullTabHandle">
+          <span class="pull-tab-text">UNZIP</span>
+          <span class="pull-tab-arrow">▼</span>
+        </div>
+
+        <!-- Floating Pulsing Instruction Tooltip -->
+        <div class="zipper-instruction-tooltip" id="zipperTooltip">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span>CLICK TO UNZIP BAG</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Ambient Particle & Wave Canvas, Lighting & Grid -->
+  <canvas id="ambientCanvas" class="ambient-canvas"></canvas>
+  <div class="ambient-grid"></div>
+  <div class="ambient-spotlight"></div>
+
+  <!-- ====================================================================
+       NAVBAR
+       ==================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="rfid-pulse-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 10a12 12 0 0 1 16 0"/>
+            <path d="M7 14a7 7 0 0 1 10 0"/>
+            <circle cx="12" cy="18" r="1.5" fill="var(--accent-cyan)"/>
+          </svg>
+        </span>
+        <span>REMEMBERING BAG</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#technology">Technology</a></li>
+        <li><a href="#compartments">Compartments</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#demo">Demo</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="btnRezipBag" class="btn-secondary" style="padding: 0.4rem 0.85rem; font-size: 0.78rem;" title="Close zipper to re-experience entrance">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>Zip Bag</span>
+        </button>
+
+        <a href="#demo" class="btn-nav">
+          <span>Try the Demo</span>
+          <span>→</span>
+        </a>
+        
+        <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <a href="#how-it-works">How It Works</a>
+    <a href="#technology">Technology</a>
+    <a href="#compartments">Compartments</a>
+    <a href="#features">Features</a>
+    <a href="#demo">Interactive Demo</a>
+    <a href="#demo" class="btn-primary" style="margin-top: 1rem; width: 100%;">
+      <span>Check My Bag</span>
+      <span>→</span>
+    </a>
+  </div>
+
+  <!-- App View 1: Main Landing Page -->
+  <div id="landingPageView" class="app-view-container">
+
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <header class="hero-section">
+      <div class="hero-container">
+        
+        <!-- Hero Left: Content -->
+        <div class="hero-content fade-in-up">
+          <div class="hero-badge">
+            <span class="hero-badge-pulse"></span>
+            <span>IoT RFID SMART BACKPACK</span>
+          </div>
+
+          <h1 class="hero-headline">
+            <span>Never leave without</span>
+            <span class="gradient-text">what matters.</span>
+          </h1>
+
+          <p class="hero-subhead">
+            Remembering Bag keeps track of your essentials and warns you before you leave something behind.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn-primary btn-google-cta" data-auth-trigger="google">
+              <svg class="google-svg-sm" viewBox="0 0 24 24" width="18" height="18">
+                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+              </svg>
+              <span>Continue with Google</span>
+              <span class="btn-arrow">→</span>
+            </button>
+            <a href="#how-it-works" class="btn-secondary">
+              <span>See How It Works</span>
+              <span class="btn-arrow-down">↓</span>
+            </a>
+          </div>
+        </div>
+
+      <!-- Hero Right: 3D Product Visual & RFID Waves -->
+      <div class="hero-visual-wrapper" id="heroVisualWrapper">
+        
+        <!-- Radar Scanning Waves -->
+        <div class="hero-radar-waves">
+          <div class="radar-ring"></div>
+          <div class="radar-ring"></div>
+          <div class="radar-ring"></div>
+        </div>
+
+        <!-- 3D Futuristic Backpack SVG -->
+        <div class="hero-backpack-3d" id="heroBackpack3D">
+          <svg class="backpack-svg" viewBox="0 0 340 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="bodyGrad" x1="40" y1="20" x2="300" y2="420" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#1A1A1A"/>
+                <stop offset="40%" stop-color="#0E0E0E"/>
+                <stop offset="100%" stop-color="#050505"/>
+              </linearGradient>
+
+              <linearGradient id="panelGrad" x1="60" y1="120" x2="280" y2="380" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#242424"/>
+                <stop offset="100%" stop-color="#121212"/>
+              </linearGradient>
+
+              <linearGradient id="cyanLineGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="rgba(0, 229, 255, 0)"/>
+                <stop offset="50%" stop-color="rgba(0, 229, 255, 0.9)"/>
+                <stop offset="100%" stop-color="rgba(0, 229, 255, 0)"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Bag Silhouette Shadow -->
+            <ellipse cx="170" cy="425" rx="120" ry="14" fill="rgba(0,0,0,0.8)"/>
+
+            <!-- Grab Handle -->
+            <path d="M 130 50 C 130 18, 210 18, 210 50" stroke="#333333" stroke-width="12" stroke-linecap="round" fill="none"/>
+            <path d="M 136 50 C 136 26, 204 26, 204 50" stroke="#00E5FF" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+
+            <!-- Main Shell -->
+            <path d="M 60 75 C 60 45, 280 45, 280 75 L 295 380 C 295 410, 45 410, 45 380 Z" fill="url(#bodyGrad)" stroke="#2C2C2C" stroke-width="2.5"/>
+
+            <!-- Contour Seam Lines -->
+            <path d="M 75 90 C 75 65, 265 65, 265 90 L 278 370 C 278 395, 62 395, 62 370 Z" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" fill="none"/>
+
+            <!-- Front Technical Compartment -->
+            <path d="M 70 180 C 70 160, 270 160, 270 180 L 265 375 C 265 390, 75 390, 75 375 Z" fill="url(#panelGrad)" stroke="#383838" stroke-width="1.5"/>
+
+            <!-- Illuminated RFID Antenna Contours -->
+            <rect x="90" y="200" width="160" height="150" rx="12" stroke="url(#cyanLineGrad)" stroke-width="1.5" fill="none" opacity="0.8"/>
+            <rect x="105" y="215" width="130" height="120" rx="8" stroke="url(#cyanLineGrad)" stroke-width="1" stroke-dasharray="6 4" fill="none" opacity="0.5"/>
+
+            <!-- Center RFID Core Sensor Module -->
+            <circle cx="170" cy="275" r="24" fill="#0A0A0A" stroke="#00E5FF" stroke-width="2"/>
+            <circle cx="170" cy="275" r="14" fill="rgba(0, 229, 255, 0.15)" stroke="#00E5FF" stroke-width="1.5"/>
+            <circle cx="170" cy="275" r="5" fill="#00E5FF"/>
+
+            <!-- Subtle Technical Grid Lines on Front Pocket -->
+            <line x1="85" y1="275" x2="140" y2="275" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="200" y1="275" x2="255" y2="275" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="170" y1="200" x2="170" y2="245" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="170" y1="305" x2="170" y2="350" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+            <!-- Status Indicator LED Top Center -->
+            <circle cx="170" cy="95" r="4" fill="#00DF8F" filter="drop-shadow(0 0 6px #00DF8F)"/>
+            <text x="170" y="118" fill="#888888" font-family="'Geist Mono', monospace" font-size="8" text-anchor="middle" letter-spacing="1">RFID ACTIVE</text>
+          </svg>
+          <div class="backpack-scanner-beam"></div>
+        </div>
+
+        <!-- Floating Item Indicators with SVG icons & detection status -->
+        <div class="floating-item-chip chip-wallet">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+          <span>Wallet</span>
+          <span class="chip-status">✓</span>
+        </div>
+
+        <div class="floating-item-chip chip-keys">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg>
+          <span>Keys</span>
+          <span class="chip-status">✓</span>
+        </div>
+
+        <div class="floating-item-chip chip-id">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="5" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M15 9h2"/><path d="M15 13h2"/><path d="M7 16a4 4 0 0 1 4-2"/></svg>
+          <span>College ID</span>
+          <span class="chip-status">✓</span>
+        </div>
+
+        <div class="floating-item-chip chip-charger">
+          <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M18 8a6 6 0 0 1-12 0"/><path d="M12 14v8"/><path d="M9 22h6"/></svg>
+          <span>Charger</span>
+          <span class="chip-status">✓</span>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       SECTION: PROBLEM SECTION
+       ==================================================================== -->
+  <section class="section">
+    <div class="section-container">
+      
+      <div class="section-header fade-in-up">
+        <div class="section-kicker">The Daily Dilemma</div>
+        <h2 class="section-title">
+          We remember the bag.<br>
+          We forget what's inside it.
+        </h2>
+        <p class="section-subtitle">
+          The problem isn't forgetting your bag. It's forgetting what's inside it.
+        </p>
+      </div>
+
+      <div class="problem-grid">
+        
+        <div class="problem-card fade-in-up">
+          <div style="color: var(--accent-cyan); margin-bottom: 1.25rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg>
+          </div>
+          <h3 class="problem-name">House & Bike Keys</h3>
+          <p class="problem-desc">Left on the bedside table. Discovered only when you return home after a 10-hour day.</p>
+        </div>
+
+        <div class="problem-card fade-in-up" style="transition-delay: 0.1s;">
+          <div style="color: var(--accent-cyan); margin-bottom: 1.25rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="14" x="3" y="5" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M15 9h2"/><path d="M15 13h2"/><path d="M7 16a4 4 0 0 1 4-2"/></svg>
+          </div>
+          <h3 class="problem-name">College & Office ID</h3>
+          <p class="problem-desc">Locked outside campus turnstiles or exam halls without mandatory physical credentials.</p>
+        </div>
+
+        <div class="problem-card fade-in-up" style="transition-delay: 0.2s;">
+          <div style="color: var(--accent-cyan); margin-bottom: 1.25rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4"/><path d="M3 5v14a2 2 0 0 0 2 2h16v-5"/><path d="M18 12a2 2 0 0 0 0 4h4v-4Z"/></svg>
+          </div>
+          <h3 class="problem-name">Wallet & Cards</h3>
+          <p class="problem-desc">Left in yesterday's jacket pocket. Trapped at the transit turnstile with zero payment options.</p>
+        </div>
+
+        <div class="problem-card fade-in-up" style="transition-delay: 0.3s;">
+          <div style="color: var(--accent-cyan); margin-bottom: 1.25rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M18 8a6 6 0 0 1-12 0"/><path d="M12 14v8"/><path d="M9 22h6"/></svg>
+          </div>
+          <h3 class="problem-name">Laptop Charger</h3>
+          <p class="problem-desc">12% battery remaining during an important presentation or mid-term laboratory session.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION: HOW IT WORKS (3 STEPS)
+       ==================================================================== -->
+  <section class="section" id="how-it-works" style="background: #030303;">
+    <div class="section-container">
+      
+      <div class="section-header fade-in-up">
+        <div class="section-kicker">Simple Automation</div>
+        <h2 class="section-title">
+          Your bag.<br>
+          Now with a memory.
+        </h2>
+        <p class="section-subtitle">
+          Three seamless steps. No checklists to check. No apps to open every morning.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        
+        <div class="step-card fade-in-up">
+          <div class="step-num">01 — TAG YOUR ESSENTIALS</div>
+          <h3 class="step-title">Attach RFID tags</h3>
+          <p class="step-desc">
+            Attach thin, battery-free RFID tags to the belongings you never want to leave behind — laptop, keys, student ID, and charger.
+          </p>
+        </div>
+
+        <div class="step-card fade-in-up" style="transition-delay: 0.15s;">
+          <div class="step-num">02 — PACK YOUR BAG</div>
+          <h3 class="step-title">Pack your bag</h3>
+          <p class="step-desc">
+            Remembering Bag detects your belongings automatically. The moment you close the zipper, the internal scanner reads the whole bag.
+          </p>
+        </div>
+
+        <div class="step-card fade-in-up" style="transition-delay: 0.3s;">
+          <div class="step-num">03 — GET ALERTED</div>
+          <h3 class="step-title">Get alerted</h3>
+          <p class="step-desc">
+            If something is missing, you'll know before you leave. The bag illuminates its indicator and sends an instant reminder to your phone.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION: TECHNOLOGY FLOW ANIMATION
+       ==================================================================== -->
+  <section class="section" id="technology">
+    <div class="section-container">
+      
+      <div class="section-header fade-in-up">
+        <div class="section-kicker">System Architecture</div>
+        <h2 class="section-title">
+          The instant sensing pipeline.
+        </h2>
+        <p class="section-subtitle">
+          How a passive sticker tag turns into an instant leave-behind alert in under two seconds.
+        </p>
+      </div>
+
+      <div class="pipeline-container fade-in-up">
+        
+        <div class="pipeline-nodes">
+          
+          <div class="pipeline-node active">
+            <div style="color:var(--accent-cyan); margin-bottom:0.4rem;">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="node-title">RFID TAG</div>
+            <div class="node-sub">Passive Sticker</div>
+          </div>
+
+          <div class="pipeline-connector">
+            <div class="pipeline-pulse-dot"></div>
+          </div>
+
+          <div class="pipeline-node">
+            <div style="color:var(--accent-cyan); margin-bottom:0.4rem;">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div class="node-title">MFRC522</div>
+            <div class="node-sub">13.56MHz Reader</div>
+          </div>
+
+          <div class="pipeline-connector">
+            <div class="pipeline-pulse-dot" style="animation-delay: 0.7s;"></div>
+          </div>
+
+          <div class="pipeline-node">
+            <div style="color:var(--accent-cyan); margin-bottom:0.4rem;">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+            </div>
+            <div class="node-title">ESP32</div>
+            <div class="node-sub">Dual-Core Logic</div>
+          </div>
+
+          <div class="pipeline-connector">
+            <div class="pipeline-pulse-dot" style="animation-delay: 1.4s;"></div>
+          </div>
+
+          <div class="pipeline-node">
+            <div style="color:var(--accent-cyan); margin-bottom:0.4rem;">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+            </div>
+            <div class="node-title">WI-FI / BLE</div>
+            <div class="node-sub">GATT Protocol</div>
+          </div>
+
+          <div class="pipeline-connector">
+            <div class="pipeline-pulse-dot" style="animation-delay: 2.1s;"></div>
+          </div>
+
+          <div class="pipeline-node">
+            <div style="color:var(--accent-cyan); margin-bottom:0.4rem;">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+            </div>
+            <div class="node-title">APPLICATION</div>
+            <div class="node-sub">Live Telemetry</div>
+          </div>
+
+          <div class="pipeline-connector">
+            <div class="pipeline-pulse-dot" style="animation-delay: 2.8s;"></div>
+          </div>
+
+          <div class="pipeline-node">
+            <div style="color:var(--status-red); margin-bottom:0.4rem;">
+              <svg class="svg-icon" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+            <div class="node-title">USER ALERT</div>
+            <div class="node-sub">Instant Notice</div>
+          </div>
+
+        </div>
+
+        <div class="pipeline-verdict-preview">
+          <div style="display:flex; align-items:center; gap:0.6rem;">
+            <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--text-muted);">LIVE TELEMETRY:</span>
+            <span style="font-family:var(--font-mono); font-size:0.85rem; color:#FFFFFF; font-weight:600;">Packet 0x4A23B9F Transmitted</span>
+          </div>
+
+          <div class="pipeline-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span>Charger missing from Tech Cavity</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION: INTERACTIVE BAG DEMO (HERO INTERACTION)
+       ==================================================================== -->
+  <section class="section demo-section" id="demo">
+    <div class="section-container">
+      
+      <div class="section-header fade-in-up">
+        <div class="section-kicker">Interactive Demonstration</div>
+        <h2 class="section-title">
+          Before you leave.<br>
+          Check your bag.
+        </h2>
+        <p class="section-subtitle">
+          Test the live RFID scanner simulation below. Click items to toggle their presence or trigger a full inventory scan.
+        </p>
+      </div>
+
+      <div class="demo-console fade-in-up">
+        
+        <!-- Left Side: Bag Schematic & Radar Sweep -->
+        <div class="demo-visual-side">
+          <div class="demo-radar-scan-line" id="demoRadarScanLine"></div>
+
+          <div class="demo-bag-schematic">
+            <svg viewBox="0 0 220 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 40 45 C 40 25, 180 25, 180 45 L 195 240 C 195 260, 25 260, 25 240 Z" fill="#111111" stroke="#333333" stroke-width="2"/>
+              <path d="M 50 110 C 50 95, 170 95, 170 110 L 165 235 C 165 245, 55 245, 55 235 Z" fill="#171717" stroke="#444444" stroke-width="1.5"/>
+              <circle cx="110" cy="170" r="30" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.6"/>
+              <circle cx="110" cy="170" r="14" fill="rgba(0, 229, 255, 0.2)" stroke="var(--accent-cyan)" stroke-width="1.5"/>
+              <circle cx="110" cy="170" r="4" fill="var(--accent-cyan)"/>
+              <text x="110" y="65" fill="#666666" font-family="'Geist Mono', monospace" font-size="8" text-anchor="middle" letter-spacing="1">RFID CAVITY</text>
+            </svg>
+          </div>
+
+          <div style="margin-top: 1.5rem; text-align: center;">
+            <span class="mono-tag">STATUS: </span>
+            <span id="demoLiveStatusText" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-cyan); font-weight:600;">READY TO SCAN</span>
+          </div>
+        </div>
+
+        <!-- Right Side: Interactive Checklist & Scan Controller -->
+        <div class="demo-interactive-side">
+          <div>
+            <div class="demo-status-header">
+              <span class="demo-tag">YOUR BAG INVENTORY</span>
+              <span class="demo-live-status ready" id="demoLiveBadge">
+                <span style="width:6px; height:6px; border-radius:50%; background:currentColor;"></span>
+                <span>Ready to check</span>
+              </span>
+            </div>
+
+            <!-- Items List -->
+            <div class="demo-items-list" id="demoItemsList">
+              <!-- Rendered dynamically by bag-demo.js with clean SVGs -->
+            </div>
+
+            <!-- Dynamic Verdict Box -->
+            <div class="demo-verdict-box" id="demoVerdictBox">
+              <div class="demo-verdict-title" id="demoVerdictTitle">1 item is missing.</div>
+              <div class="demo-verdict-desc" id="demoVerdictDesc">Your charger isn't in the bag.</div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="demo-actions">
+            <button class="btn-scan-main" id="btnStartScan">
+              <span>CHECK BAG</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION: SMART COMPARTMENTS
+       ==================================================================== -->
+  <section class="section" id="compartments">
+    <div class="section-container">
+      
+      <div class="section-header fade-in-up">
+        <div class="section-kicker">Multi-Zone Architecture</div>
+        <h2 class="section-title">
+          Every compartment.<br>
+          Every essential.
+        </h2>
+        <p class="section-subtitle">
+          Separate internal RFID loops ensure precision detection across front pockets, laptop sleeves, and quick-access pouches.
+        </p>
+      </div>
+
+      <div class="compartments-layout fade-in-up">
+        
+        <!-- Compartment Selection Tabs -->
+        <div class="compartment-tabs">
+          
+          <div class="compartment-tab active" data-compartment="1">
+            <div class="compartment-tab-header">
+              <h3 class="compartment-tab-title">COMPARTMENT 01 — FRONT QUICK-ACCESS</h3>
+              <span class="compartment-tab-freq">13.56 MHz HF</span>
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-secondary);">High-frequency loop designed for cards, badges, and slim wallets.</p>
+            <div class="compartment-items-chips">
+              <span class="comp-item-badge">Wallet</span>
+              <span class="comp-item-badge">College ID</span>
+              <span class="comp-item-badge">Earbuds</span>
+            </div>
+          </div>
+
+          <div class="compartment-tab" data-compartment="2">
+            <div class="compartment-tab-header">
+              <h3 class="compartment-tab-title">COMPARTMENT 02 — MAIN TECH CAVITY</h3>
+              <span class="compartment-tab-freq">NEAR-FIELD COIL</span>
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-secondary);">Deep cavity field configured to detect laptops, chargers, and calculators.</p>
+            <div class="compartment-items-chips">
+              <span class="comp-item-badge">Laptop (15")</span>
+              <span class="comp-item-badge">Fast Charger</span>
+              <span class="comp-item-badge">Calculator</span>
+            </div>
+          </div>
+
+          <div class="compartment-tab" data-compartment="3">
+            <div class="compartment-tab-header">
+              <h3 class="compartment-tab-title">COMPARTMENT 03 — SECURITY KEY POCKET</h3>
+              <span class="compartment-tab-freq">SHIELDED ZONE</span>
+            </div>
+            <p style="font-size:0.85rem; color:var(--text-secondary);">Dedicated pocket for metal keys and sensitive cards without cross-talk.</p>
+            <div class="compartment-items-chips">
+              <span class="comp-item-badge">House & Bike Keys</span>
+              <span class="comp-item-badge">Transit Pass</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Compartment Interactive Stage Visualizer -->
+        <div class="compartment-display-stage">
+          <div class="compartment-highlight-ring" id="compHighlightRing"></div>
+          
+          <div style="z-index: 2; text-align: center; max-width: 320px;">
+            <span class="mono-tag" id="compStageZoneFreq">RFID ZONE 13.56 MHz (HF PASSIVE)</span>
+            <h4 id="compStageZoneTitle" style="font-size: 1.3rem; margin: 0.5rem 0 1rem; color: #FFFFFF;">
+              COMPARTMENT 01 — FRONT QUICK-ACCESS
+            </h4>
+            
+            <div id="compStageItems" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 1rem;">
+              <!-- Populated dynamically via compartments.js -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION: TECHNOLOGY SECTION (6 CARDS)
+       ==================================================================== -->
+  <section class="section" style="background: #040404;">
+    <div class="section-container">
+      
+      <div class="section-header fade-in-up">
+        <div class="section-kicker">Core Hardware & Software</div>
+        <h2 class="section-title">
+          Small technology.<br>
+          Big peace of mind.
+        </h2>
+        <p class="section-subtitle">
+          Built with precision hardware components engineered for ultra-low power consumption and zero-latency detection.
+        </p>
+      </div>
+
+      <div class="features-grid-6">
+        
+        <div class="feature-box fade-in-up">
+          <div style="color:var(--accent-cyan); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="feature-title">RFID</h3>
+          <p class="feature-desc">
+            Identifies your essentials without batteries. Tiny passive sticker tags last indefinitely on laptops, ID cards, and keys.
+          </p>
+        </div>
+
+        <div class="feature-box fade-in-up" style="transition-delay: 0.1s;">
+          <div style="color:var(--accent-cyan); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>
+          </div>
+          <h3 class="feature-title">ESP32</h3>
+          <p class="feature-desc">
+            The brain connecting the bag to the digital world. Features deep sleep mode to run for weeks on a single recharge.
+          </p>
+        </div>
+
+        <div class="feature-box fade-in-up" style="transition-delay: 0.2s;">
+          <div style="color:var(--accent-cyan); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+          </div>
+          <h3 class="feature-title">Wi-Fi & BLE</h3>
+          <p class="feature-desc">
+            Keeps the system connected. Synchronizes telemetry via Web Bluetooth and home Wi-Fi gateways seamlessly.
+          </p>
+        </div>
+
+        <div class="feature-box fade-in-up" style="transition-delay: 0.3s;">
+          <div style="color:var(--accent-cyan); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+          </div>
+          <h3 class="feature-title">Smart App</h3>
+          <p class="feature-desc">
+            Shows what's present and what's missing in real time. Provides custom packing profiles for work, college, and travel.
+          </p>
+        </div>
+
+        <div class="feature-box fade-in-up" style="transition-delay: 0.4s;">
+          <div style="color:var(--accent-cyan); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="m6 15-4-4 6.75-6.77a7.78 7.78 0 0 1 11 11L13 22l-4-4 6.35-6.35a2.14 2.14 0 0 0-3-3L6 15Z"/><path d="m5 8 4 4"/><path d="m12 15 4 4"/></svg>
+          </div>
+          <h3 class="feature-title">Magnetic Trigger</h3>
+          <p class="feature-desc">
+            Reed switch sensor wakes the microcontroller on zipper closure, eliminating the need to press any manual scan buttons.
+          </p>
+        </div>
+
+        <div class="feature-box fade-in-up" style="transition-delay: 0.5s;">
+          <div style="color:var(--accent-cyan); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="22" y1="11" y2="13"/><path d="m11 10-2 4h4l-2 4"/></svg>
+          </div>
+          <h3 class="feature-title">USB-C Power</h3>
+          <p class="feature-desc">
+            Rechargeable 3.7V Li-Po battery charged via standard USB Type-C with built-in TP4056 overcharge protection.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION: CINEMATIC "BEFORE YOU LEAVE"
+       ==================================================================== -->
+  <section class="section" id="cinematicSection">
+    <div class="section-container">
+      
+      <div class="cinematic-wrapper fade-in-up">
+        <div class="cinematic-spotlight"></div>
+
+        <div class="cinematic-headline">BEFORE YOU LEAVE...</div>
+
+        <div class="cinematic-story-card">
+          <div class="story-scan-status" id="cinematicStatus">
+            Checking your bag...
+          </div>
+
+          <h2 class="story-big-reveal" id="cinematicRevealTitle">
+            Scanning bag contents...
+          </h2>
+
+          <div class="story-sub-reveal" id="cinematicRevealSub">
+            Checking all essential tags
+          </div>
+
+          <p class="story-tagline">
+            Remembering Bag catches the mistake before you walk out the front door.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION: FEATURES (6 CARDS)
+       ==================================================================== -->
+  <section class="section" id="features">
+    <div class="section-container">
+      
+      <div class="section-header fade-in-up">
+        <div class="section-kicker">Product Capabilities</div>
+        <h2 class="section-title">
+          Designed to remember the things<br>
+          that matter.
+        </h2>
+        <p class="section-subtitle">
+          Everything you need for effortless mornings and total peace of mind.
+        </p>
+      </div>
+
+      <div class="features-grid-6">
+        
+        <div class="feature-box fade-in-up">
+          <div style="color:var(--status-green); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3 class="feature-title">Never forget essentials</h3>
+          <p class="feature-desc">Know exactly what's missing before you leave home.</p>
+        </div>
+
+        <div class="feature-box fade-in-up" style="transition-delay: 0.1s;">
+          <div style="color:var(--accent-cyan); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3 class="feature-title">Real-time detection</h3>
+          <p class="feature-desc">RFID technology detects tagged items in under 2 seconds.</p>
+        </div>
+
+        <div class="feature-box fade-in-up" style="transition-delay: 0.2s;">
+          <div style="color:var(--status-red); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+          <h3 class="feature-title">Smart alerts</h3>
+          <p class="feature-desc">Get notified on your phone when an essential item is omitted.</p>
+        </div>
+
+        <div class="feature-box fade-in-up" style="transition-delay: 0.3s;">
+          <div style="color:var(--accent-cyan); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          </div>
+          <h3 class="feature-title">Multiple compartments</h3>
+          <p class="feature-desc">Designed to support multiple detection zones across pockets.</p>
+        </div>
+
+        <div class="feature-box fade-in-up" style="transition-delay: 0.4s;">
+          <div style="color:var(--accent-cyan); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><line x1="4" x2="4" y1="21" y2="14"/><line x1="4" x2="4" y1="10" y2="3"/><line x1="12" x2="12" y1="21" y2="12"/><line x1="12" x2="12" y1="8" y2="3"/><line x1="20" x2="20" y1="21" y2="16"/><line x1="20" x2="20" y1="12" y2="3"/><line x1="1" x2="7" y1="14" y2="14"/><line x1="9" x2="15" y1="8" y2="8"/><line x1="17" x2="23" y1="16" y2="16"/></svg>
+          </div>
+          <h3 class="feature-title">Simple setup</h3>
+          <p class="feature-desc">Stick tags onto your belongings and you're ready to go.</p>
+        </div>
+
+        <div class="feature-box fade-in-up" style="transition-delay: 0.5s;">
+          <div style="color:var(--accent-cyan); margin-bottom:1rem;">
+            <svg class="svg-icon lg" viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M8 21v-5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v5"/><path d="M8 10h8"/></svg>
+          </div>
+          <h3 class="feature-title">Built for everyday life</h3>
+          <p class="feature-desc">Designed around the way students and professionals actually pack.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       SECTION: FUTURE VISION
+       ==================================================================== -->
+  <section class="section" style="background: #030303;">
+    <div class="section-container">
+      
+      <div class="section-header fade-in-up">
+        <div class="section-kicker">Evolution</div>
+        <h2 class="section-title">
+          This is just the beginning.
+        </h2>
+        <p class="section-subtitle">
+          The future of intelligent luggage and wearable ambient IoT.
+        </p>
+      </div>
+
+      <div class="roadmap-timeline fade-in-up">
+        
+        <div class="roadmap-col">
+          <div class="roadmap-phase-tag">PHASE 01 — NOW</div>
+          <h3 class="roadmap-title">RFID + ESP32</h3>
+          <ul class="roadmap-points">
+            <li>Sub-2-second item detection</li>
+            <li>Magnetic zipper auto-trigger</li>
+            <li>Web Bluetooth live dashboard</li>
+            <li>Single-bag packing verification</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-col highlight">
+          <div class="roadmap-phase-tag">PHASE 02 — NEXT</div>
+          <h3 class="roadmap-title">Multiple RFID Zones</h3>
+          <ul class="roadmap-points">
+            <li>Dedicated compartment isolation</li>
+            <li>Multi-bag profile linking</li>
+            <li>Low-power e-Paper status label</li>
+            <li>Automated battery recharge cradle</li>
+          </ul>
+        </div>
+
+        <div class="roadmap-col">
+          <div class="roadmap-phase-tag">PHASE 03 — FUTURE</div>
+          <h3 class="roadmap-title">Context AI Alerts</h3>
+          <ul class="roadmap-points">
+            <li>Calendar-aware packing reminders</li>
+            <li>Weather-based umbrella alerts</li>
+            <li>Weight distribution sensors</li>
+            <li>Cellular GPS lost-bag recovery</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       FINAL CTA
+       ==================================================================== -->
+  <section class="final-cta-section">
+    <div class="section-container fade-in-up">
+      <h2 class="final-cta-headline">
+        Your bag remembers.<br>
+        <span class="gradient-text">So you don't have to.</span>
+      </h2>
+      <p class="final-cta-sub">
+        Never leave without what matters.
+      </p>
+      <a href="#demo" class="btn-primary" style="font-size: 1.05rem; padding: 0.9rem 1.8rem;">
+        <span>Try the Remembering Bag Demo</span>
+        <span>→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ====================================================================
+       FOOTER
+       ==================================================================== -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <span class="rfid-pulse-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 10a12 12 0 0 1 16 0"/>
+              <path d="M7 14a7 7 0 0 1 10 0"/>
+              <circle cx="12" cy="18" r="1.5" fill="var(--accent-cyan)"/>
+            </svg>
+          </span>
+          <span>REMEMBERING BAG</span>
+          <span style="color: var(--text-muted); font-size: 0.8rem; margin-left: 0.5rem;">— Smart essentials. Zero forgotten items.</span>
+        </div>
+
+        <div class="footer-links">
+          <a href="#how-it-works">How It Works</a>
+          <a href="#technology">Technology</a>
+          <a href="#compartments">Compartments</a>
+          <a href="#demo">Live Demo</a>
+        </div>
+      </div>
+    </footer>
+  </div> <!-- /#landingPageView -->
+
+  <!-- App View 2: User Dashboard View -->
+  <div id="userDashboardView" class="app-view-container" style="display: none;"></div>
+
+  <!-- App View 3: Bag & User Settings View -->
+  <div id="userSettingsView" class="app-view-container" style="display: none;"></div>
+
+  <!-- Scripts -->
+  <script src="js/custom-cursor.js"></script>
+  <script src="js/ambient-particles.js"></script>
+  <script src="js/zipper-gateway.js"></script>
+  <script src="js/hero-visual.js"></script>
+  <script src="js/bag-demo.js"></script>
+  <script src="js/compartments.js"></script>
+  <script src="js/tech-flow.js"></script>
+  <script src="js/cinematic-story.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/onboarding.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/view-manager.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,899 @@
+{
+  "users": [
+    {
+      "id": "usr_demo_01",
+      "googleId": "google_10829482910481",
+      "name": "Alex Rivera",
+      "email": "alex.rivera@example.com",
+      "profileImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "emailVerified": true,
+      "userType": "student",
+      "onboardingCompleted": true,
+      "onboardingStep": 6,
+      "createdAt": "2026-08-23T10:28:05.861Z",
+      "updatedAt": "2026-09-11T16:18:40.190Z"
+    },
+    {
+      "id": "usr_1788690496161_4898",
+      "googleId": "google_test_998877",
+      "name": "Sarah Chen",
+      "email": "sarah.engineer@gmail.com",
+      "profileImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "emailVerified": true,
+      "userType": "employee",
+      "onboardingCompleted": true,
+      "onboardingStep": 6,
+      "createdAt": "2026-09-06T10:28:16.161Z",
+      "updatedAt": "2026-09-06T10:28:16.168Z"
+    },
+    {
+      "id": "usr_1788690496173_1019",
+      "googleId": "google_user_b_456",
+      "name": "Bob Student",
+      "email": "bob.student@college.edu",
+      "profileImage": "https://ui-avatars.com/api/?name=Bob%20Student&background=00E5FF&color=000&bold=true",
+      "emailVerified": true,
+      "userType": null,
+      "onboardingCompleted": false,
+      "onboardingStep": 2,
+      "createdAt": "2026-09-06T10:28:16.173Z",
+      "updatedAt": "2026-09-06T10:28:16.173Z"
+    },
+    {
+      "id": "usr_1788690725585_4035",
+      "googleId": "google_1788690725541",
+      "name": "Alex Rivera",
+      "email": "alex.student@university.edu",
+      "profileImage": "https://ui-avatars.com/api/?name=Alex%20Rivera&background=00E5FF&color=000&bold=true",
+      "emailVerified": true,
+      "userType": "student",
+      "onboardingCompleted": true,
+      "onboardingStep": 6,
+      "createdAt": "2026-09-06T10:32:05.586Z",
+      "updatedAt": "2026-09-06T12:04:37.878Z"
+    }
+  ],
+  "schedules": [
+    {
+      "id": "sch_demo_01",
+      "userId": "usr_demo_01",
+      "activeDays": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
+      "startTime": "08:30",
+      "endTime": "17:00",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "sch_1788690496166",
+      "userId": "usr_1788690496161_4898",
+      "activeDays": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
+      "startTime": "09:00",
+      "endTime": "18:00",
+      "createdAt": "2026-09-06T10:28:16.166Z",
+      "updatedAt": "2026-09-06T10:28:16.166Z"
+    },
+    {
+      "id": "sch_1788690794332",
+      "userId": "usr_1788690725585_4035",
+      "activeDays": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
+      "startTime": "08:30",
+      "endTime": "17:30",
+      "createdAt": "2026-09-06T10:33:14.332Z",
+      "updatedAt": "2026-09-06T10:33:14.332Z"
+    }
+  ],
+  "bags": [
+    {
+      "id": "bag_demo_01",
+      "userId": "usr_demo_01",
+      "name": "My College Bag",
+      "hardwareId": "ESP32-BAG-01",
+      "isDefault": true,
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "bag_1788690496166",
+      "userId": "usr_1788690496161_4898",
+      "name": "Work Tech Backpack",
+      "hardwareId": "ESP32-SARAH-01",
+      "isDefault": true,
+      "createdAt": "2026-09-06T10:28:16.166Z",
+      "updatedAt": "2026-09-06T10:28:16.166Z"
+    },
+    {
+      "id": "bag_1788690805431",
+      "userId": "usr_1788690725585_4035",
+      "name": "My College Bag",
+      "hardwareId": "ESP32-BAG-01",
+      "isDefault": true,
+      "createdAt": "2026-09-06T10:33:25.431Z",
+      "updatedAt": "2026-09-06T10:33:25.431Z"
+    }
+  ],
+  "items": [
+    {
+      "id": "item_01",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "name": "Laptop",
+      "category": "Electronics",
+      "rfidUid": "E2801160",
+      "importance": "critical",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "item_02",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "name": "Wallet",
+      "category": "Personal",
+      "rfidUid": "5D88C94B",
+      "importance": "critical",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "item_03",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "name": "Keys",
+      "category": "Personal",
+      "rfidUid": "C390E41A",
+      "importance": "critical",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "item_04",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "name": "Notebook",
+      "category": "Stationery",
+      "rfidUid": "A1B2C3D4",
+      "importance": "medium",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "item_05",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "name": "Charger",
+      "category": "Electronics",
+      "rfidUid": "7F3E2A10",
+      "importance": "medium",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "item_1788690496167_687",
+      "userId": "usr_1788690496161_4898",
+      "bagId": "bag_1788690496166",
+      "name": "Work Laptop",
+      "category": "Electronics",
+      "rfidUid": "AA11BB22",
+      "importance": "critical",
+      "createdAt": "2026-09-06T10:28:16.167Z",
+      "updatedAt": "2026-09-06T10:28:16.167Z"
+    },
+    {
+      "id": "item_1788690496167_637",
+      "userId": "usr_1788690496161_4898",
+      "bagId": "bag_1788690496166",
+      "name": "Office Security Pass",
+      "category": "Credentials",
+      "rfidUid": "CC33DD44",
+      "importance": "critical",
+      "createdAt": "2026-09-06T10:28:16.167Z",
+      "updatedAt": "2026-09-06T10:28:16.167Z"
+    },
+    {
+      "id": "item_1788690496167_834",
+      "userId": "usr_1788690496161_4898",
+      "bagId": "bag_1788690496166",
+      "name": "Laptop Charger",
+      "category": "Electronics",
+      "rfidUid": "EE55FF66",
+      "importance": "medium",
+      "createdAt": "2026-09-06T10:28:16.167Z",
+      "updatedAt": "2026-09-06T10:28:16.167Z"
+    },
+    {
+      "id": "item_1788690496167_791",
+      "userId": "usr_1788690496161_4898",
+      "bagId": "bag_1788690496166",
+      "name": "House Keys",
+      "category": "Personal",
+      "rfidUid": "11223344",
+      "importance": "critical",
+      "createdAt": "2026-09-06T10:28:16.167Z",
+      "updatedAt": "2026-09-06T10:28:16.167Z"
+    },
+    {
+      "id": "item_1788690834209_73",
+      "userId": "usr_1788690725585_4035",
+      "bagId": "bag_1788690805431",
+      "name": "Laptop",
+      "category": "Electronics",
+      "rfidUid": "9EB07068",
+      "importance": "critical",
+      "createdAt": "2026-09-06T10:33:54.209Z",
+      "updatedAt": "2026-09-06T10:33:54.209Z"
+    },
+    {
+      "id": "item_1788690834209_207",
+      "userId": "usr_1788690725585_4035",
+      "bagId": "bag_1788690805431",
+      "name": "Student ID Card",
+      "category": "Credentials",
+      "rfidUid": "04A23B9F",
+      "importance": "critical",
+      "createdAt": "2026-09-06T10:33:54.209Z",
+      "updatedAt": "2026-09-06T10:33:54.209Z"
+    },
+    {
+      "id": "item_1788690834209_12",
+      "userId": "usr_1788690725585_4035",
+      "bagId": "bag_1788690805431",
+      "name": "Notebook & Pen",
+      "category": "Stationery",
+      "rfidUid": "A1B2C3D4",
+      "importance": "medium",
+      "createdAt": "2026-09-06T10:33:54.209Z",
+      "updatedAt": "2026-09-06T10:33:54.209Z"
+    },
+    {
+      "id": "item_1788690834209_0",
+      "userId": "usr_1788690725585_4035",
+      "bagId": "bag_1788690805431",
+      "name": "Scientific Calculator",
+      "category": "Electronics",
+      "rfidUid": "7F3E2A10",
+      "importance": "medium",
+      "createdAt": "2026-09-06T10:33:54.209Z",
+      "updatedAt": "2026-09-06T10:33:54.209Z"
+    }
+  ],
+  "scans": [
+    {
+      "id": "scan_1789144109359",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-11T16:28:29.359Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [],
+      "presentCount": 0,
+      "totalExpected": 5,
+      "isAllPresent": false,
+      "missingItems": [
+        {
+          "id": "item_01",
+          "name": "Laptop",
+          "rfidUid": "E2801160",
+          "importance": "critical"
+        },
+        {
+          "id": "item_02",
+          "name": "Wallet",
+          "rfidUid": "5D88C94B",
+          "importance": "critical"
+        },
+        {
+          "id": "item_03",
+          "name": "Keys",
+          "rfidUid": "C390E41A",
+          "importance": "critical"
+        },
+        {
+          "id": "item_04",
+          "name": "Notebook",
+          "rfidUid": "A1B2C3D4",
+          "importance": "medium"
+        },
+        {
+          "id": "item_05",
+          "name": "Charger",
+          "rfidUid": "7F3E2A10",
+          "importance": "medium"
+        }
+      ],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": true
+    },
+    {
+      "id": "scan_1789144106853",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-11T16:28:26.853Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [],
+      "presentCount": 0,
+      "totalExpected": 5,
+      "isAllPresent": false,
+      "missingItems": [
+        {
+          "id": "item_01",
+          "name": "Laptop",
+          "rfidUid": "E2801160",
+          "importance": "critical"
+        },
+        {
+          "id": "item_02",
+          "name": "Wallet",
+          "rfidUid": "5D88C94B",
+          "importance": "critical"
+        },
+        {
+          "id": "item_03",
+          "name": "Keys",
+          "rfidUid": "C390E41A",
+          "importance": "critical"
+        },
+        {
+          "id": "item_04",
+          "name": "Notebook",
+          "rfidUid": "A1B2C3D4",
+          "importance": "medium"
+        },
+        {
+          "id": "item_05",
+          "name": "Charger",
+          "rfidUid": "7F3E2A10",
+          "importance": "medium"
+        }
+      ],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": true
+    },
+    {
+      "id": "scan_1788708091351",
+      "userId": "usr_1788690725585_4035",
+      "bagId": "bag_1788690805431",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-06T15:21:31.351Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [
+        "9EB07068",
+        "04A23B9F",
+        "A1B2C3D4",
+        "7F3E2A10"
+      ],
+      "presentCount": 4,
+      "totalExpected": 4,
+      "isAllPresent": true,
+      "missingItems": [],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_1788708090169",
+      "userId": "usr_1788690725585_4035",
+      "bagId": "bag_1788690805431",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-06T15:21:30.169Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [
+        "9EB07068",
+        "04A23B9F",
+        "A1B2C3D4"
+      ],
+      "presentCount": 3,
+      "totalExpected": 4,
+      "isAllPresent": false,
+      "missingItems": [
+        {
+          "id": "item_1788690834209_0",
+          "name": "Scientific Calculator",
+          "rfidUid": "7F3E2A10",
+          "importance": "medium"
+        }
+      ],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_1788708087786",
+      "userId": "usr_1788690725585_4035",
+      "bagId": "bag_1788690805431",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-06T15:21:27.786Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [
+        "9EB07068",
+        "04A23B9F"
+      ],
+      "presentCount": 2,
+      "totalExpected": 4,
+      "isAllPresent": false,
+      "missingItems": [
+        {
+          "id": "item_1788690834209_12",
+          "name": "Notebook & Pen",
+          "rfidUid": "A1B2C3D4",
+          "importance": "medium"
+        },
+        {
+          "id": "item_1788690834209_0",
+          "name": "Scientific Calculator",
+          "rfidUid": "7F3E2A10",
+          "importance": "medium"
+        }
+      ],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_1788708085753",
+      "userId": "usr_1788690725585_4035",
+      "bagId": "bag_1788690805431",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-06T15:21:25.753Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [
+        "9EB07068"
+      ],
+      "presentCount": 1,
+      "totalExpected": 4,
+      "isAllPresent": false,
+      "missingItems": [
+        {
+          "id": "item_1788690834209_207",
+          "name": "Student ID Card",
+          "rfidUid": "04A23B9F",
+          "importance": "critical"
+        },
+        {
+          "id": "item_1788690834209_12",
+          "name": "Notebook & Pen",
+          "rfidUid": "A1B2C3D4",
+          "importance": "medium"
+        },
+        {
+          "id": "item_1788690834209_0",
+          "name": "Scientific Calculator",
+          "rfidUid": "7F3E2A10",
+          "importance": "medium"
+        }
+      ],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_1788692617326",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-06T11:03:37.326Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [
+        "E2801160",
+        "5D88C94B",
+        "C390E41A",
+        "7F3E2A10",
+        "A1B2C3D4"
+      ],
+      "presentCount": 5,
+      "totalExpected": 5,
+      "isAllPresent": true,
+      "missingItems": [],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_1788692615163",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-06T11:03:35.163Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [
+        "E2801160",
+        "5D88C94B",
+        "C390E41A",
+        "7F3E2A10",
+        "A1B2C3D4"
+      ],
+      "presentCount": 5,
+      "totalExpected": 5,
+      "isAllPresent": true,
+      "missingItems": [],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_1788692341026",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-06T10:59:01.026Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [
+        "E2801160",
+        "5D88C94B",
+        "C390E41A",
+        "7F3E2A10",
+        "A1B2C3D4"
+      ],
+      "presentCount": 5,
+      "totalExpected": 5,
+      "isAllPresent": true,
+      "missingItems": [],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_1788692323365",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-06T10:58:43.365Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [
+        "E2801160",
+        "5D88C94B",
+        "C390E41A",
+        "7F3E2A10",
+        "A1B2C3D4"
+      ],
+      "presentCount": 5,
+      "totalExpected": 5,
+      "isAllPresent": true,
+      "missingItems": [],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_1788692307179",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-06T10:58:27.179Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [
+        "E2801160",
+        "5D88C94B",
+        "C390E41A",
+        "7F3E2A10"
+      ],
+      "presentCount": 4,
+      "totalExpected": 5,
+      "isAllPresent": false,
+      "missingItems": [
+        {
+          "id": "item_04",
+          "name": "Notebook",
+          "rfidUid": "A1B2C3D4",
+          "importance": "medium"
+        }
+      ],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_1788690496173",
+      "userId": "usr_1788690496161_4898",
+      "bagId": "bag_1788690496166",
+      "bagName": "Work Tech Backpack",
+      "timestamp": "2026-09-06T10:28:16.173Z",
+      "source": "RC522 Proximity Tap",
+      "scannedUids": [
+        "AA11BB22",
+        "UNKNOWN_TAG_999"
+      ],
+      "presentCount": 1,
+      "totalExpected": 4,
+      "isAllPresent": false,
+      "missingItems": [
+        {
+          "id": "item_1788690496167_637",
+          "name": "Office Security Pass",
+          "rfidUid": "CC33DD44",
+          "importance": "critical"
+        },
+        {
+          "id": "item_1788690496167_834",
+          "name": "Laptop Charger",
+          "rfidUid": "EE55FF66",
+          "importance": "medium"
+        },
+        {
+          "id": "item_1788690496167_791",
+          "name": "House Keys",
+          "rfidUid": "11223344",
+          "importance": "critical"
+        }
+      ],
+      "unknownUids": [
+        "UNKNOWN_TAG_999"
+      ],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_1788690496172",
+      "userId": "usr_1788690496161_4898",
+      "bagId": "bag_1788690496166",
+      "bagName": "Work Tech Backpack",
+      "timestamp": "2026-09-06T10:28:16.172Z",
+      "source": "RC522 Proximity Tap",
+      "scannedUids": [
+        "AA11BB22",
+        "CC33DD44",
+        "11223344"
+      ],
+      "presentCount": 3,
+      "totalExpected": 4,
+      "isAllPresent": false,
+      "missingItems": [
+        {
+          "id": "item_1788690496167_834",
+          "name": "Laptop Charger",
+          "rfidUid": "EE55FF66",
+          "importance": "medium"
+        }
+      ],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_1788690496170",
+      "userId": "usr_1788690496161_4898",
+      "bagId": "bag_1788690496166",
+      "bagName": "Work Tech Backpack",
+      "timestamp": "2026-09-06T10:28:16.170Z",
+      "source": "RC522 Proximity Tap",
+      "scannedUids": [
+        "AA11BB22",
+        "CC33DD44",
+        "EE55FF66",
+        "11223344"
+      ],
+      "presentCount": 4,
+      "totalExpected": 4,
+      "isAllPresent": true,
+      "missingItems": [],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": false
+    },
+    {
+      "id": "scan_01",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-06T08:28:05.862Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [
+        "E2801160",
+        "5D88C94B",
+        "C390E41A",
+        "7F3E2A10"
+      ],
+      "presentCount": 4,
+      "totalExpected": 5,
+      "isAllPresent": false,
+      "missingItems": [
+        {
+          "id": "item_04",
+          "name": "Notebook",
+          "rfidUid": "A1B2C3D4",
+          "importance": "medium"
+        }
+      ],
+      "unknownUids": [],
+      "batteryLevel": 92
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1789147107303",
+      "userId": "usr_demo_01",
+      "type": "missing_item_alert",
+      "recipient": "alex.rivera@example.com",
+      "subject": "Remembering Bag Alert: You might be forgetting something!",
+      "message": "Your bag (My College Bag) appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have everything before leaving!",
+      "missingItems": [
+        "Laptop",
+        "Wallet",
+        "Keys",
+        "Notebook",
+        "Charger"
+      ],
+      "status": "delivered",
+      "timestamp": "2026-09-11T17:18:27.303Z"
+    },
+    {
+      "id": "notif_1789147106619",
+      "userId": "usr_demo_01",
+      "type": "missing_item_alert",
+      "recipient": "alex.rivera@example.com",
+      "subject": "Remembering Bag Alert: You might be forgetting something!",
+      "message": "Your bag (My College Bag) appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have everything before leaving!",
+      "missingItems": [
+        "Laptop",
+        "Wallet",
+        "Keys",
+        "Notebook",
+        "Charger"
+      ],
+      "status": "delivered",
+      "timestamp": "2026-09-11T17:18:26.619Z"
+    },
+    {
+      "id": "notif_1789147105904",
+      "userId": "usr_demo_01",
+      "type": "missing_item_alert",
+      "recipient": "alex.rivera@example.com",
+      "subject": "Remembering Bag Alert: You might be forgetting something!",
+      "message": "Your bag (My College Bag) appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have everything before leaving!",
+      "missingItems": [
+        "Laptop",
+        "Wallet",
+        "Keys",
+        "Notebook",
+        "Charger"
+      ],
+      "status": "delivered",
+      "timestamp": "2026-09-11T17:18:25.904Z"
+    },
+    {
+      "id": "notif_1789147104819",
+      "userId": "usr_demo_01",
+      "type": "missing_item_alert",
+      "recipient": "alex.rivera@example.com",
+      "subject": "Remembering Bag Alert: You might be forgetting something!",
+      "message": "Your bag (My College Bag) appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have everything before leaving!",
+      "missingItems": [
+        "Laptop",
+        "Wallet",
+        "Keys",
+        "Notebook",
+        "Charger"
+      ],
+      "status": "delivered",
+      "timestamp": "2026-09-11T17:18:24.819Z"
+    },
+    {
+      "id": "notif_1789144109360",
+      "userId": "usr_demo_01",
+      "type": "missing_item_alert",
+      "recipient": "alex.rivera@example.com",
+      "subject": "Remembering Bag Alert: You might be forgetting something!",
+      "message": "Your bag appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have them before leaving.",
+      "missingItems": [
+        "Laptop",
+        "Wallet",
+        "Keys",
+        "Notebook",
+        "Charger"
+      ],
+      "status": "delivered",
+      "timestamp": "2026-09-11T16:28:29.360Z"
+    },
+    {
+      "id": "notif_1789144106854",
+      "userId": "usr_demo_01",
+      "type": "missing_item_alert",
+      "recipient": "alex.rivera@example.com",
+      "subject": "Remembering Bag Alert: You might be forgetting something!",
+      "message": "Your bag appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have them before leaving.",
+      "missingItems": [
+        "Laptop",
+        "Wallet",
+        "Keys",
+        "Notebook",
+        "Charger"
+      ],
+      "status": "delivered",
+      "timestamp": "2026-09-11T16:28:26.854Z"
+    },
+    {
+      "id": "notif_1788690496172",
+      "userId": "usr_1788690496161_4898",
+      "type": "missing_item_alert",
+      "recipient": "sarah.engineer@gmail.com",
+      "subject": "Remembering Bag Alert: You might be forgetting something!",
+      "message": "Your bag appears to be missing: Laptop Charger. Make sure you have it before leaving.",
+      "missingItems": [
+        "Laptop Charger"
+      ],
+      "status": "delivered",
+      "timestamp": "2026-09-06T10:28:16.172Z"
+    },
+    {
+      "id": "notif_01",
+      "userId": "usr_demo_01",
+      "type": "missing_item_alert",
+      "recipient": "alex.rivera@example.com",
+      "subject": "Remembering Bag Alert: 1 item missing before leaving",
+      "message": "Your bag appears to be missing: Notebook. Make sure you have it before leaving for college today.",
+      "missingItems": [
+        "Notebook"
+      ],
+      "status": "delivered",
+      "timestamp": "2026-09-06T08:28:05.862Z"
+    }
+  ],
+  "notificationSettings": [
+    {
+      "id": "nset_demo_01",
+      "userId": "usr_demo_01",
+      "emailEnabled": true,
+      "notifyOnMissing": true,
+      "dailySummaryEnabled": true,
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "nset_1788690496161",
+      "userId": "usr_1788690496161_4898",
+      "emailEnabled": true,
+      "notifyOnMissing": true,
+      "dailySummaryEnabled": true,
+      "createdAt": "2026-09-06T10:28:16.161Z",
+      "updatedAt": "2026-09-06T10:28:16.161Z"
+    },
+    {
+      "id": "nset_1788690496173",
+      "userId": "usr_1788690496173_1019",
+      "emailEnabled": true,
+      "notifyOnMissing": true,
+      "dailySummaryEnabled": true,
+      "createdAt": "2026-09-06T10:28:16.173Z",
+      "updatedAt": "2026-09-06T10:28:16.173Z"
+    },
+    {
+      "id": "nset_1788690725589",
+      "userId": "usr_1788690725585_4035",
+      "emailEnabled": true,
+      "notifyOnMissing": true,
+      "dailySummaryEnabled": true,
+      "createdAt": "2026-09-06T10:32:05.589Z",
+      "updatedAt": "2026-09-06T10:32:05.589Z"
+    }
+  ],
+  "lists": [
+    {
+      "id": "list-college",
+      "name": "College List",
+      "icon": "graduation-cap",
+      "description": "Daily college classes, lectures and labs",
+      "is_default": true,
+      "created_at": "2026-08-30T10:28:05.862Z"
+    }
+  ]
+}

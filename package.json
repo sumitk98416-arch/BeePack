@@ -1,0 +1,27 @@
+{
+  "name": "smart-remembering-backpack",
+  "version": "1.0.0",
+  "description": "Smart Remembering Backpack — IoT RFID sensing with ESP32 and Web Bluetooth Live Dashboard",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "test": "node backend/test_api.js",
+    "test:v2": "node backend/test_v2_flow.js"
+  },
+  "keywords": [
+    "esp32",
+    "rfid",
+    "mfrc522",
+    "smart-bag",
+    "web-bluetooth",
+    "iot",
+    "packing-reminder"
+  ],
+  "author": "Smart Backpack Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

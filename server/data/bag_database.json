@@ -1,0 +1,231 @@
+{
+  "users": [
+    {
+      "id": "usr_demo_01",
+      "googleId": "google_10829482910481",
+      "name": "Alex Rivera",
+      "email": "alex.rivera@example.com",
+      "profileImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "emailVerified": true,
+      "userType": "student",
+      "onboardingCompleted": true,
+      "onboardingStep": 6,
+      "createdAt": "2026-08-23T10:28:05.861Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    }
+  ],
+  "schedules": [
+    {
+      "id": "sch_demo_01",
+      "userId": "usr_demo_01",
+      "activeDays": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
+      "startTime": "08:30",
+      "endTime": "17:00",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    }
+  ],
+  "bags": [
+    {
+      "id": "bag_demo_01",
+      "userId": "usr_demo_01",
+      "name": "My College Bag",
+      "hardwareId": "ESP32-BAG-01",
+      "isDefault": true,
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    }
+  ],
+  "items": [
+    {
+      "id": "item_01",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "name": "Laptop",
+      "category": "Electronics",
+      "rfidUid": "E2801160",
+      "importance": "critical",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "item_02",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "name": "Wallet",
+      "category": "Personal",
+      "rfidUid": "5D88C94B",
+      "importance": "critical",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "item_03",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "name": "Keys",
+      "category": "Personal",
+      "rfidUid": "C390E41A",
+      "importance": "critical",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "item_04",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "name": "Notebook",
+      "category": "Stationery",
+      "rfidUid": "A1B2C3D4",
+      "importance": "medium",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    },
+    {
+      "id": "item_05",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "name": "Charger",
+      "category": "Electronics",
+      "rfidUid": "7F3E2A10",
+      "importance": "medium",
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    }
+  ],
+  "scans": [
+    {
+      "id": "scan_1789139992490",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-11T15:19:52.490Z",
+      "source": "Test Runner",
+      "scannedUids": [],
+      "presentCount": 0,
+      "totalExpected": 5,
+      "isAllPresent": false,
+      "missingItems": [
+        {
+          "id": "item_01",
+          "name": "Laptop",
+          "rfidUid": "E2801160",
+          "importance": "critical"
+        },
+        {
+          "id": "item_02",
+          "name": "Wallet",
+          "rfidUid": "5D88C94B",
+          "importance": "critical"
+        },
+        {
+          "id": "item_03",
+          "name": "Keys",
+          "rfidUid": "C390E41A",
+          "importance": "critical"
+        },
+        {
+          "id": "item_04",
+          "name": "Notebook",
+          "rfidUid": "A1B2C3D4",
+          "importance": "medium"
+        },
+        {
+          "id": "item_05",
+          "name": "Charger",
+          "rfidUid": "7F3E2A10",
+          "importance": "medium"
+        }
+      ],
+      "unknownUids": [],
+      "batteryLevel": 94,
+      "isTodayActive": true
+    },
+    {
+      "id": "scan_01",
+      "userId": "usr_demo_01",
+      "bagId": "bag_demo_01",
+      "bagName": "My College Bag",
+      "timestamp": "2026-09-06T08:28:05.862Z",
+      "source": "RC522 Proximity Reader",
+      "scannedUids": [
+        "E2801160",
+        "5D88C94B",
+        "C390E41A",
+        "7F3E2A10"
+      ],
+      "presentCount": 4,
+      "totalExpected": 5,
+      "isAllPresent": false,
+      "missingItems": [
+        {
+          "id": "item_04",
+          "name": "Notebook",
+          "rfidUid": "A1B2C3D4",
+          "importance": "medium"
+        }
+      ],
+      "unknownUids": [],
+      "batteryLevel": 92
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1789139992490",
+      "userId": "usr_demo_01",
+      "type": "missing_item_alert",
+      "recipient": "alex.rivera@example.com",
+      "subject": "Remembering Bag Alert: You might be forgetting something!",
+      "message": "Your bag appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have them before leaving.",
+      "missingItems": [
+        "Laptop",
+        "Wallet",
+        "Keys",
+        "Notebook",
+        "Charger"
+      ],
+      "status": "delivered",
+      "timestamp": "2026-09-11T15:19:52.490Z"
+    },
+    {
+      "id": "notif_01",
+      "userId": "usr_demo_01",
+      "type": "missing_item_alert",
+      "recipient": "alex.rivera@example.com",
+      "subject": "Remembering Bag Alert: 1 item missing before leaving",
+      "message": "Your bag appears to be missing: Notebook. Make sure you have it before leaving for college today.",
+      "missingItems": [
+        "Notebook"
+      ],
+      "status": "delivered",
+      "timestamp": "2026-09-06T08:28:05.862Z"
+    }
+  ],
+  "notificationSettings": [
+    {
+      "id": "nset_demo_01",
+      "userId": "usr_demo_01",
+      "emailEnabled": true,
+      "notifyOnMissing": true,
+      "dailySummaryEnabled": true,
+      "createdAt": "2026-08-23T10:28:05.862Z",
+      "updatedAt": "2026-09-06T10:28:05.862Z"
+    }
+  ],
+  "lists": [
+    {
+      "id": "list-college",
+      "name": "College List",
+      "icon": "graduation-cap",
+      "description": "Daily college classes, lectures and labs",
+      "is_default": true,
+      "created_at": "2026-08-30T10:28:05.862Z"
+    }
+  ]
+}
