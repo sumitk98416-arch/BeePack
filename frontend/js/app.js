@@ -48,26 +48,63 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => el.classList.add('visible'));
   }
 
-  // 4. Smooth Anchor Scrolling
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const targetId = this.getAttribute('href');
-      if (targetId === '#' || !targetId) return;
-      
-      const targetEl = document.querySelector(targetId);
-      if (targetEl) {
-        e.preventDefault();
-        const offset = 80; // nav height + buffer
-        const bodyRect = document.body.getBoundingClientRect().top;
-        const elementRect = targetEl.getBoundingClientRect().top;
-        const elementPosition = elementRect - bodyRect;
-        const offsetPosition = elementPosition - offset;
+  // 4. Global Delegated Anchor Navigation (Supports both static and dynamic links)
+  document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+    const href = anchor.getAttribute('href');
+    if (!href) return;
+
+    // Logo / Back to Landing
+    if (href === '#' || anchor.classList.contains('nav-logo')) {
+      e.preventDefault();
+      if (window.appViewManager) {
+        window.appViewManager.switchView('landing');
       }
-    });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    // Dashboard navigation
+    if (href === '#dashboard') {
+      e.preventDefault();
+      if (window.authManager && window.authManager.user) {
+        if (window.appViewManager) window.appViewManager.switchView('dashboard');
+      } else {
+        if (window.authManager) window.authManager.openAuthModal();
+      }
+      return;
+    }
+
+    // Settings navigation
+    if (href === '#settings') {
+      e.preventDefault();
+      if (window.authManager && window.authManager.user) {
+        if (window.appViewManager) window.appViewManager.switchView('settings');
+      } else {
+        if (window.authManager) window.authManager.openAuthModal();
+      }
+      return;
+    }
+
+    // Section targets on landing page (e.g. #how-it-works, #technology, #compartments, #features, #demo)
+    if (href.startsWith('#how') || href.startsWith('#tech') || href.startsWith('#comp') || href.startsWith('#feat') || href.startsWith('#demo')) {
+      e.preventDefault();
+      
+      // Close mobile drawer if open
+      if (drawer && drawer.classList.contains('open')) {
+        drawer.classList.remove('open');
+      }
+
+      if (window.appViewManager) {
+        if (window.appViewManager.currentView !== 'landing') {
+          window.appViewManager.switchView('landing', href);
+        } else {
+          window.appViewManager.scrollToTarget(href);
+        }
+      }
+      return;
+    }
   });
 });

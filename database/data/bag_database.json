@@ -2,61 +2,66 @@
   "users": [
     {
       "id": "usr_demo_01",
+      "userId": "usr_demo_01",
       "googleId": "google_10829482910481",
       "name": "Alex Rivera",
+      "username": "alexrivera",
       "email": "alex.rivera@example.com",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
       "profileImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "useCase": "student",
       "emailVerified": true,
       "userType": "student",
       "onboardingCompleted": true,
       "onboardingStep": 6,
-      "createdAt": "2026-08-23T10:28:05.861Z",
-      "updatedAt": "2026-09-11T16:18:40.190Z"
+      "createdAt": "2026-08-29T06:30:45.692Z",
+      "updatedAt": "2026-09-12T06:30:45.693Z"
     },
     {
-      "id": "usr_1788690496161_4898",
-      "googleId": "google_test_998877",
-      "name": "Sarah Chen",
-      "email": "sarah.engineer@gmail.com",
-      "profileImage": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "id": "goog_firebase_9921",
+      "userId": "goog_firebase_9921",
+      "googleId": "goog_firebase_9921",
+      "name": "Maya Lin (Updated)",
+      "username": "maya.lin",
+      "email": "maya.lin@university.edu",
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150",
+      "profileImage": "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150",
+      "useCase": "researcher",
+      "userType": "researcher",
       "emailVerified": true,
-      "userType": "employee",
       "onboardingCompleted": true,
-      "onboardingStep": 6,
-      "createdAt": "2026-09-06T10:28:16.161Z",
-      "updatedAt": "2026-09-06T10:28:16.168Z"
+      "createdAt": "2026-09-12T06:30:45.709Z",
+      "updatedAt": "2026-09-12T06:30:45.713Z"
     },
     {
-      "id": "usr_1788690496173_1019",
-      "googleId": "google_user_b_456",
-      "name": "Bob Student",
-      "email": "bob.student@college.edu",
-      "profileImage": "https://ui-avatars.com/api/?name=Bob%20Student&background=00E5FF&color=000&bold=true",
+      "id": "usr_1789194960017_1254",
+      "userId": "usr_1789194960017_1254",
+      "googleId": "google_1789194959988",
+      "name": "Murtaza Jamali",
+      "username": "murtazajamali07",
+      "email": "murtazajamali07@gmail.com",
+      "avatar": "https://ui-avatars.com/api/?name=Murtaza+Jamali&background=00E5FF&color=000&bold=true",
+      "profileImage": "https://ui-avatars.com/api/?name=Murtaza+Jamali&background=00E5FF&color=000&bold=true",
       "emailVerified": true,
-      "userType": null,
-      "onboardingCompleted": false,
-      "onboardingStep": 2,
-      "createdAt": "2026-09-06T10:28:16.173Z",
-      "updatedAt": "2026-09-06T10:28:16.173Z"
-    },
-    {
-      "id": "usr_1788690725585_4035",
-      "googleId": "google_1788690725541",
-      "name": "Alex Rivera",
-      "email": "alex.student@university.edu",
-      "profileImage": "https://ui-avatars.com/api/?name=Alex%20Rivera&background=00E5FF&color=000&bold=true",
-      "emailVerified": true,
+      "useCase": "student",
       "userType": "student",
       "onboardingCompleted": true,
       "onboardingStep": 6,
-      "createdAt": "2026-09-06T10:32:05.586Z",
-      "updatedAt": "2026-09-06T12:04:37.878Z"
+      "createdAt": "2026-09-12T06:36:00.017Z",
+      "updatedAt": "2026-09-12T06:36:11.586Z"
     }
   ],
   "schedules": [
     {
       "id": "sch_demo_01",
       "userId": "usr_demo_01",
+      "day": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri"
+      ],
       "activeDays": [
         "mon",
         "tue",
@@ -66,27 +71,39 @@
       ],
       "startTime": "08:30",
       "endTime": "17:00",
-      "createdAt": "2026-08-23T10:28:05.862Z",
-      "updatedAt": "2026-09-06T10:28:05.862Z"
+      "active": true,
+      "createdAt": "2026-08-29T06:30:45.693Z",
+      "updatedAt": "2026-09-12T06:30:45.693Z"
     },
     {
-      "id": "sch_1788690496166",
-      "userId": "usr_1788690496161_4898",
+      "id": "sch_1789194645709",
+      "userId": "goog_firebase_9921",
+      "day": [
+        "mon",
+        "wed",
+        "fri"
+      ],
       "activeDays": [
+        "mon",
+        "wed",
+        "fri"
+      ],
+      "startTime": "09:00",
+      "endTime": "18:00",
+      "active": true,
+      "createdAt": "2026-09-12T06:30:45.709Z",
+      "updatedAt": "2026-09-12T06:30:45.713Z"
+    },
+    {
+      "id": "sch_1789194960018",
+      "userId": "usr_1789194960017_1254",
+      "day": [
         "mon",
         "tue",
         "wed",
         "thu",
         "fri"
       ],
-      "startTime": "09:00",
-      "endTime": "18:00",
-      "createdAt": "2026-09-06T10:28:16.166Z",
-      "updatedAt": "2026-09-06T10:28:16.166Z"
-    },
-    {
-      "id": "sch_1788690794332",
-      "userId": "usr_1788690725585_4035",
       "activeDays": [
         "mon",
         "tue",
@@ -96,8 +113,9 @@
       ],
       "startTime": "08:30",
       "endTime": "17:30",
-      "createdAt": "2026-09-06T10:33:14.332Z",
-      "updatedAt": "2026-09-06T10:33:14.332Z"
+      "active": true,
+      "createdAt": "2026-09-12T06:36:00.018Z",
+      "updatedAt": "2026-09-12T06:36:06.907Z"
     }
   ],
   "bags": [
@@ -107,595 +125,377 @@
       "name": "My College Bag",
       "hardwareId": "ESP32-BAG-01",
       "isDefault": true,
-      "createdAt": "2026-08-23T10:28:05.862Z",
-      "updatedAt": "2026-09-06T10:28:05.862Z"
+      "createdAt": "2026-08-29T06:30:45.693Z",
+      "updatedAt": "2026-09-12T06:30:45.693Z"
     },
     {
-      "id": "bag_1788690496166",
-      "userId": "usr_1788690496161_4898",
-      "name": "Work Tech Backpack",
-      "hardwareId": "ESP32-SARAH-01",
-      "isDefault": true,
-      "createdAt": "2026-09-06T10:28:16.166Z",
-      "updatedAt": "2026-09-06T10:28:16.166Z"
-    },
-    {
-      "id": "bag_1788690805431",
-      "userId": "usr_1788690725585_4035",
+      "id": "bag_1789194645709",
+      "userId": "goog_firebase_9921",
       "name": "My College Bag",
       "hardwareId": "ESP32-BAG-01",
       "isDefault": true,
-      "createdAt": "2026-09-06T10:33:25.431Z",
-      "updatedAt": "2026-09-06T10:33:25.431Z"
+      "createdAt": "2026-09-12T06:30:45.709Z",
+      "updatedAt": "2026-09-12T06:30:45.709Z"
+    },
+    {
+      "id": "bag_1789194968172",
+      "userId": "usr_1789194960017_1254",
+      "name": "My College Bag",
+      "hardwareId": "ESP32-BAG-01",
+      "isDefault": true,
+      "createdAt": "2026-09-12T06:36:08.172Z",
+      "updatedAt": "2026-09-12T06:36:08.172Z"
     }
   ],
   "items": [
     {
       "id": "item_01",
+      "itemId": "item_01",
       "userId": "usr_demo_01",
       "bagId": "bag_demo_01",
       "name": "Laptop",
       "category": "Electronics",
       "rfidUid": "E2801160",
+      "type": "REGULAR",
+      "status": "IN_BAG",
       "importance": "critical",
-      "createdAt": "2026-08-23T10:28:05.862Z",
-      "updatedAt": "2026-09-06T10:28:05.862Z"
+      "createdAt": "2026-08-29T06:30:45.693Z",
+      "updatedAt": "2026-09-12T06:30:45.693Z"
     },
     {
       "id": "item_02",
+      "itemId": "item_02",
       "userId": "usr_demo_01",
       "bagId": "bag_demo_01",
       "name": "Wallet",
       "category": "Personal",
       "rfidUid": "5D88C94B",
+      "type": "REGULAR",
+      "status": "IN_BAG",
       "importance": "critical",
-      "createdAt": "2026-08-23T10:28:05.862Z",
-      "updatedAt": "2026-09-06T10:28:05.862Z"
+      "createdAt": "2026-08-29T06:30:45.693Z",
+      "updatedAt": "2026-09-12T06:30:45.693Z"
     },
     {
       "id": "item_03",
+      "itemId": "item_03",
       "userId": "usr_demo_01",
       "bagId": "bag_demo_01",
       "name": "Keys",
       "category": "Personal",
       "rfidUid": "C390E41A",
+      "type": "REGULAR",
+      "status": "IN_BAG",
       "importance": "critical",
-      "createdAt": "2026-08-23T10:28:05.862Z",
-      "updatedAt": "2026-09-06T10:28:05.862Z"
+      "createdAt": "2026-08-29T06:30:45.693Z",
+      "updatedAt": "2026-09-12T06:30:45.693Z"
     },
     {
       "id": "item_04",
+      "itemId": "item_04",
       "userId": "usr_demo_01",
       "bagId": "bag_demo_01",
       "name": "Notebook",
       "category": "Stationery",
       "rfidUid": "A1B2C3D4",
+      "type": "REGULAR",
+      "status": "IN_BAG",
       "importance": "medium",
-      "createdAt": "2026-08-23T10:28:05.862Z",
-      "updatedAt": "2026-09-06T10:28:05.862Z"
+      "createdAt": "2026-08-29T06:30:45.693Z",
+      "updatedAt": "2026-09-12T06:30:45.693Z"
     },
     {
       "id": "item_05",
+      "itemId": "item_05",
       "userId": "usr_demo_01",
       "bagId": "bag_demo_01",
       "name": "Charger",
       "category": "Electronics",
       "rfidUid": "7F3E2A10",
+      "type": "REGULAR",
+      "status": "IN_BAG",
       "importance": "medium",
-      "createdAt": "2026-08-23T10:28:05.862Z",
-      "updatedAt": "2026-09-06T10:28:05.862Z"
+      "createdAt": "2026-08-29T06:30:45.693Z",
+      "updatedAt": "2026-09-12T06:30:45.693Z"
     },
     {
-      "id": "item_1788690496167_687",
-      "userId": "usr_1788690496161_4898",
-      "bagId": "bag_1788690496166",
-      "name": "Work Laptop",
+      "id": "item_1789194645714_891",
+      "itemId": "item_1789194645714_891",
+      "userId": "goog_firebase_9921",
+      "bagId": "bag_1789194645709",
+      "name": "Research iPad Pro",
       "category": "Electronics",
-      "rfidUid": "AA11BB22",
-      "importance": "critical",
-      "createdAt": "2026-09-06T10:28:16.167Z",
-      "updatedAt": "2026-09-06T10:28:16.167Z"
+      "rfidUid": "AABBCCDDEE",
+      "type": "REGULAR",
+      "status": "IN_BAG",
+      "importance": "medium",
+      "createdAt": "2026-09-12T06:30:45.714Z",
+      "updatedAt": "2026-09-12T06:30:45.720Z"
     },
     {
-      "id": "item_1788690496167_637",
-      "userId": "usr_1788690496161_4898",
-      "bagId": "bag_1788690496166",
-      "name": "Office Security Pass",
+      "id": "item_1789194645716_52",
+      "itemId": "item_1789194645716_52",
+      "userId": "goog_firebase_9921",
+      "bagId": "bag_1789194645709",
+      "name": "Conference Badge",
       "category": "Credentials",
-      "rfidUid": "CC33DD44",
-      "importance": "critical",
-      "createdAt": "2026-09-06T10:28:16.167Z",
-      "updatedAt": "2026-09-06T10:28:16.167Z"
-    },
-    {
-      "id": "item_1788690496167_834",
-      "userId": "usr_1788690496161_4898",
-      "bagId": "bag_1788690496166",
-      "name": "Laptop Charger",
-      "category": "Electronics",
-      "rfidUid": "EE55FF66",
+      "rfidUid": "FEEDFACE02",
+      "type": "TEMPORARY",
+      "status": "IN_BAG",
       "importance": "medium",
-      "createdAt": "2026-09-06T10:28:16.167Z",
-      "updatedAt": "2026-09-06T10:28:16.167Z"
+      "createdAt": "2026-09-12T06:30:45.716Z",
+      "updatedAt": "2026-09-12T06:30:45.716Z"
     },
     {
-      "id": "item_1788690496167_791",
-      "userId": "usr_1788690496161_4898",
-      "bagId": "bag_1788690496166",
-      "name": "House Keys",
-      "category": "Personal",
-      "rfidUid": "11223344",
-      "importance": "critical",
-      "createdAt": "2026-09-06T10:28:16.167Z",
-      "updatedAt": "2026-09-06T10:28:16.167Z"
-    },
-    {
-      "id": "item_1788690834209_73",
-      "userId": "usr_1788690725585_4035",
-      "bagId": "bag_1788690805431",
+      "id": "item_1789194970640_669",
+      "userId": "usr_1789194960017_1254",
+      "bagId": "bag_1789194968172",
       "name": "Laptop",
       "category": "Electronics",
-      "rfidUid": "9EB07068",
+      "rfidUid": "E2801160",
       "importance": "critical",
-      "createdAt": "2026-09-06T10:33:54.209Z",
-      "updatedAt": "2026-09-06T10:33:54.209Z"
+      "createdAt": "2026-09-12T06:36:10.640Z",
+      "updatedAt": "2026-09-12T06:36:10.640Z",
+      "itemId": "item_1789194970640_669",
+      "type": "REGULAR",
+      "status": "IN_BAG"
     },
     {
-      "id": "item_1788690834209_207",
-      "userId": "usr_1788690725585_4035",
-      "bagId": "bag_1788690805431",
+      "id": "item_1789194970640_105",
+      "userId": "usr_1789194960017_1254",
+      "bagId": "bag_1789194968172",
       "name": "Student ID Card",
       "category": "Credentials",
       "rfidUid": "04A23B9F",
       "importance": "critical",
-      "createdAt": "2026-09-06T10:33:54.209Z",
-      "updatedAt": "2026-09-06T10:33:54.209Z"
+      "createdAt": "2026-09-12T06:36:10.640Z",
+      "updatedAt": "2026-09-12T06:36:10.640Z",
+      "itemId": "item_1789194970640_105",
+      "type": "REGULAR",
+      "status": "IN_BAG"
     },
     {
-      "id": "item_1788690834209_12",
-      "userId": "usr_1788690725585_4035",
-      "bagId": "bag_1788690805431",
+      "id": "item_1789194970640_260",
+      "userId": "usr_1789194960017_1254",
+      "bagId": "bag_1789194968172",
       "name": "Notebook & Pen",
       "category": "Stationery",
       "rfidUid": "A1B2C3D4",
       "importance": "medium",
-      "createdAt": "2026-09-06T10:33:54.209Z",
-      "updatedAt": "2026-09-06T10:33:54.209Z"
+      "createdAt": "2026-09-12T06:36:10.640Z",
+      "updatedAt": "2026-09-12T06:36:10.640Z",
+      "itemId": "item_1789194970640_260",
+      "type": "REGULAR",
+      "status": "IN_BAG"
     },
     {
-      "id": "item_1788690834209_0",
-      "userId": "usr_1788690725585_4035",
-      "bagId": "bag_1788690805431",
+      "id": "item_1789194970640_183",
+      "userId": "usr_1789194960017_1254",
+      "bagId": "bag_1789194968172",
       "name": "Scientific Calculator",
       "category": "Electronics",
       "rfidUid": "7F3E2A10",
       "importance": "medium",
-      "createdAt": "2026-09-06T10:33:54.209Z",
-      "updatedAt": "2026-09-06T10:33:54.209Z"
+      "createdAt": "2026-09-12T06:36:10.640Z",
+      "updatedAt": "2026-09-12T06:36:10.640Z",
+      "itemId": "item_1789194970640_183",
+      "type": "REGULAR",
+      "status": "IN_BAG"
+    }
+  ],
+  "reminders": [
+    {
+      "reminderId": "rem_demo_01",
+      "id": "rem_demo_01",
+      "userId": "usr_demo_01",
+      "itemId": "item_01",
+      "reminderTime": "2026-09-12T07:30:45.693Z",
+      "status": "PENDING",
+      "message": "Remember to bring Laptop charger before evening lab!"
+    },
+    {
+      "reminderId": "rem_1789194645784_259",
+      "id": "rem_1789194645784_259",
+      "userId": "goog_firebase_9921",
+      "itemId": "item_1789194645714_891",
+      "reminderTime": "2026-09-12T06:30:44.783Z",
+      "status": "FIRED",
+      "message": "Pack iPad before heading to the lab!",
+      "createdAt": "2026-09-12T06:30:45.784Z",
+      "firedAt": "2026-09-12T06:30:45.788Z"
+    }
+  ],
+  "activities": [
+    {
+      "activityId": "act_1789195000700_226",
+      "id": "act_1789195000701",
+      "userId": "usr_1789194960017_1254",
+      "type": "BAG_CLOSED",
+      "itemId": null,
+      "timestamp": "2026-09-12T06:36:40.667Z",
+      "details": "Backpack zipper secured and closed"
+    },
+    {
+      "activityId": "act_1789194975585_135",
+      "id": "act_1789194975585",
+      "userId": "usr_1789194960017_1254",
+      "type": "BAG_OPENED",
+      "itemId": null,
+      "timestamp": "2026-09-12T06:36:15.583Z",
+      "details": "Backpack zipper opened"
+    },
+    {
+      "activityId": "act_1789194932116_164",
+      "id": "act_1789194932117",
+      "userId": "usr_demo_01",
+      "type": "BAG_OPENED",
+      "itemId": null,
+      "timestamp": "2026-09-12T06:35:31.454Z",
+      "details": "Backpack zipper opened"
+    },
+    {
+      "activityId": "act_1789194797308_337",
+      "id": "act_1789194797308",
+      "userId": "usr_demo_01",
+      "type": "BAG_CLOSED",
+      "itemId": null,
+      "timestamp": "2026-09-12T06:33:17.308Z",
+      "details": "Backpack zipper secured and closed"
+    },
+    {
+      "activityId": "act_1789194797228_3",
+      "id": "act_1789194797228",
+      "userId": "usr_demo_01",
+      "type": "BAG_OPENED",
+      "itemId": null,
+      "timestamp": "2026-09-12T06:33:17.227Z",
+      "details": "Backpack zipper opened"
+    },
+    {
+      "activityId": "act_1789194667189_786",
+      "id": "act_1789194667189",
+      "userId": "usr_demo_01",
+      "type": "BAG_CLOSED",
+      "itemId": null,
+      "timestamp": "2026-09-12T06:31:07.189Z",
+      "details": "Backpack zipper secured and closed"
+    },
+    {
+      "activityId": "act_1789194667162_525",
+      "id": "act_1789194667162",
+      "userId": "usr_demo_01",
+      "type": "BAG_OPENED",
+      "itemId": null,
+      "timestamp": "2026-09-12T06:31:07.162Z",
+      "details": "Backpack zipper opened"
+    },
+    {
+      "activityId": "act_1789194645788_65",
+      "id": "act_1789194645788_960",
+      "userId": "goog_firebase_9921",
+      "type": "REMINDER_CREATED",
+      "itemId": "item_1789194645714_891",
+      "timestamp": "2026-09-12T06:30:45.788Z",
+      "details": "Pack iPad before heading to the lab!"
+    },
+    {
+      "activityId": "act_1789194645784_603",
+      "id": "act_1789194645784",
+      "userId": "goog_firebase_9921",
+      "type": "REMINDER_CREATED",
+      "itemId": "item_1789194645714_891",
+      "timestamp": "2026-09-12T06:30:45.784Z",
+      "details": "Pack iPad before heading to the lab!"
+    },
+    {
+      "activityId": "act_1789194645782_94",
+      "id": "act_1789194645782",
+      "userId": "goog_firebase_9921",
+      "type": "BAG_CLOSED",
+      "itemId": null,
+      "timestamp": "2026-09-12T06:30:45.780Z",
+      "details": "Backpack zipper secured and closed"
+    },
+    {
+      "activityId": "act_1789194645723_144",
+      "id": "act_1789194645723",
+      "userId": "goog_firebase_9921",
+      "type": "BAG_OPENED",
+      "itemId": null,
+      "timestamp": "2026-09-12T06:30:45.722Z",
+      "details": "Backpack zipper opened"
+    },
+    {
+      "activityId": "act_1789194645721_382",
+      "id": "act_1789194645721",
+      "userId": "goog_firebase_9921",
+      "type": "ITEM_RETURNED",
+      "itemId": "item_1789194645714_891",
+      "timestamp": "2026-09-12T06:30:45.720Z",
+      "details": "Research iPad Pro was returned to the bag"
+    },
+    {
+      "activityId": "act_1789194645720_306",
+      "id": "act_1789194645720",
+      "userId": "goog_firebase_9921",
+      "type": "ITEM_REMOVED",
+      "itemId": "item_1789194645714_891",
+      "timestamp": "2026-09-12T06:30:45.719Z",
+      "details": "Research iPad Pro was removed from the bag"
+    },
+    {
+      "activityId": "act_1789194645716_433",
+      "id": "act_1789194645716",
+      "userId": "goog_firebase_9921",
+      "type": "ITEM_ADDED",
+      "itemId": "item_1789194645716_52",
+      "timestamp": "2026-09-12T06:30:45.716Z",
+      "details": "Added Conference Badge (TEMPORARY) to bag"
+    },
+    {
+      "activityId": "act_1789194645714_627",
+      "id": "act_1789194645714",
+      "userId": "goog_firebase_9921",
+      "type": "ITEM_ADDED",
+      "itemId": "item_1789194645714_891",
+      "timestamp": "2026-09-12T06:30:45.714Z",
+      "details": "Added Research Tablet (REGULAR) to bag"
+    },
+    {
+      "activityId": "act_demo_01",
+      "id": "act_demo_01",
+      "userId": "usr_demo_01",
+      "type": "ITEM_ADDED",
+      "itemId": "item_01",
+      "timestamp": "2026-09-12T01:30:45.693Z",
+      "details": "Added Laptop to bag inventory"
+    },
+    {
+      "activityId": "act_demo_02",
+      "id": "act_demo_02",
+      "userId": "usr_demo_01",
+      "type": "BAG_OPENED",
+      "itemId": null,
+      "timestamp": "2026-09-12T03:30:45.693Z",
+      "details": "Main zipper opened"
+    },
+    {
+      "activityId": "act_demo_03",
+      "id": "act_demo_03",
+      "userId": "usr_demo_01",
+      "type": "BAG_CLOSED",
+      "itemId": null,
+      "timestamp": "2026-09-12T04:30:45.693Z",
+      "details": "Bag secured and closed"
     }
   ],
   "scans": [
-    {
-      "id": "scan_1789144109359",
-      "userId": "usr_demo_01",
-      "bagId": "bag_demo_01",
-      "bagName": "My College Bag",
-      "timestamp": "2026-09-11T16:28:29.359Z",
-      "source": "RC522 Proximity Reader",
-      "scannedUids": [],
-      "presentCount": 0,
-      "totalExpected": 5,
-      "isAllPresent": false,
-      "missingItems": [
-        {
-          "id": "item_01",
-          "name": "Laptop",
-          "rfidUid": "E2801160",
-          "importance": "critical"
-        },
-        {
-          "id": "item_02",
-          "name": "Wallet",
-          "rfidUid": "5D88C94B",
-          "importance": "critical"
-        },
-        {
-          "id": "item_03",
-          "name": "Keys",
-          "rfidUid": "C390E41A",
-          "importance": "critical"
-        },
-        {
-          "id": "item_04",
-          "name": "Notebook",
-          "rfidUid": "A1B2C3D4",
-          "importance": "medium"
-        },
-        {
-          "id": "item_05",
-          "name": "Charger",
-          "rfidUid": "7F3E2A10",
-          "importance": "medium"
-        }
-      ],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": true
-    },
-    {
-      "id": "scan_1789144106853",
-      "userId": "usr_demo_01",
-      "bagId": "bag_demo_01",
-      "bagName": "My College Bag",
-      "timestamp": "2026-09-11T16:28:26.853Z",
-      "source": "RC522 Proximity Reader",
-      "scannedUids": [],
-      "presentCount": 0,
-      "totalExpected": 5,
-      "isAllPresent": false,
-      "missingItems": [
-        {
-          "id": "item_01",
-          "name": "Laptop",
-          "rfidUid": "E2801160",
-          "importance": "critical"
-        },
-        {
-          "id": "item_02",
-          "name": "Wallet",
-          "rfidUid": "5D88C94B",
-          "importance": "critical"
-        },
-        {
-          "id": "item_03",
-          "name": "Keys",
-          "rfidUid": "C390E41A",
-          "importance": "critical"
-        },
-        {
-          "id": "item_04",
-          "name": "Notebook",
-          "rfidUid": "A1B2C3D4",
-          "importance": "medium"
-        },
-        {
-          "id": "item_05",
-          "name": "Charger",
-          "rfidUid": "7F3E2A10",
-          "importance": "medium"
-        }
-      ],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": true
-    },
-    {
-      "id": "scan_1788708091351",
-      "userId": "usr_1788690725585_4035",
-      "bagId": "bag_1788690805431",
-      "bagName": "My College Bag",
-      "timestamp": "2026-09-06T15:21:31.351Z",
-      "source": "RC522 Proximity Reader",
-      "scannedUids": [
-        "9EB07068",
-        "04A23B9F",
-        "A1B2C3D4",
-        "7F3E2A10"
-      ],
-      "presentCount": 4,
-      "totalExpected": 4,
-      "isAllPresent": true,
-      "missingItems": [],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
-    {
-      "id": "scan_1788708090169",
-      "userId": "usr_1788690725585_4035",
-      "bagId": "bag_1788690805431",
-      "bagName": "My College Bag",
-      "timestamp": "2026-09-06T15:21:30.169Z",
-      "source": "RC522 Proximity Reader",
-      "scannedUids": [
-        "9EB07068",
-        "04A23B9F",
-        "A1B2C3D4"
-      ],
-      "presentCount": 3,
-      "totalExpected": 4,
-      "isAllPresent": false,
-      "missingItems": [
-        {
-          "id": "item_1788690834209_0",
-          "name": "Scientific Calculator",
-          "rfidUid": "7F3E2A10",
-          "importance": "medium"
-        }
-      ],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
-    {
-      "id": "scan_1788708087786",
-      "userId": "usr_1788690725585_4035",
-      "bagId": "bag_1788690805431",
-      "bagName": "My College Bag",
-      "timestamp": "2026-09-06T15:21:27.786Z",
-      "source": "RC522 Proximity Reader",
-      "scannedUids": [
-        "9EB07068",
-        "04A23B9F"
-      ],
-      "presentCount": 2,
-      "totalExpected": 4,
-      "isAllPresent": false,
-      "missingItems": [
-        {
-          "id": "item_1788690834209_12",
-          "name": "Notebook & Pen",
-          "rfidUid": "A1B2C3D4",
-          "importance": "medium"
-        },
-        {
-          "id": "item_1788690834209_0",
-          "name": "Scientific Calculator",
-          "rfidUid": "7F3E2A10",
-          "importance": "medium"
-        }
-      ],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
-    {
-      "id": "scan_1788708085753",
-      "userId": "usr_1788690725585_4035",
-      "bagId": "bag_1788690805431",
-      "bagName": "My College Bag",
-      "timestamp": "2026-09-06T15:21:25.753Z",
-      "source": "RC522 Proximity Reader",
-      "scannedUids": [
-        "9EB07068"
-      ],
-      "presentCount": 1,
-      "totalExpected": 4,
-      "isAllPresent": false,
-      "missingItems": [
-        {
-          "id": "item_1788690834209_207",
-          "name": "Student ID Card",
-          "rfidUid": "04A23B9F",
-          "importance": "critical"
-        },
-        {
-          "id": "item_1788690834209_12",
-          "name": "Notebook & Pen",
-          "rfidUid": "A1B2C3D4",
-          "importance": "medium"
-        },
-        {
-          "id": "item_1788690834209_0",
-          "name": "Scientific Calculator",
-          "rfidUid": "7F3E2A10",
-          "importance": "medium"
-        }
-      ],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
-    {
-      "id": "scan_1788692617326",
-      "userId": "usr_demo_01",
-      "bagId": "bag_demo_01",
-      "bagName": "My College Bag",
-      "timestamp": "2026-09-06T11:03:37.326Z",
-      "source": "RC522 Proximity Reader",
-      "scannedUids": [
-        "E2801160",
-        "5D88C94B",
-        "C390E41A",
-        "7F3E2A10",
-        "A1B2C3D4"
-      ],
-      "presentCount": 5,
-      "totalExpected": 5,
-      "isAllPresent": true,
-      "missingItems": [],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
-    {
-      "id": "scan_1788692615163",
-      "userId": "usr_demo_01",
-      "bagId": "bag_demo_01",
-      "bagName": "My College Bag",
-      "timestamp": "2026-09-06T11:03:35.163Z",
-      "source": "RC522 Proximity Reader",
-      "scannedUids": [
-        "E2801160",
-        "5D88C94B",
-        "C390E41A",
-        "7F3E2A10",
-        "A1B2C3D4"
-      ],
-      "presentCount": 5,
-      "totalExpected": 5,
-      "isAllPresent": true,
-      "missingItems": [],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
-    {
-      "id": "scan_1788692341026",
-      "userId": "usr_demo_01",
-      "bagId": "bag_demo_01",
-      "bagName": "My College Bag",
-      "timestamp": "2026-09-06T10:59:01.026Z",
-      "source": "RC522 Proximity Reader",
-      "scannedUids": [
-        "E2801160",
-        "5D88C94B",
-        "C390E41A",
-        "7F3E2A10",
-        "A1B2C3D4"
-      ],
-      "presentCount": 5,
-      "totalExpected": 5,
-      "isAllPresent": true,
-      "missingItems": [],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
-    {
-      "id": "scan_1788692323365",
-      "userId": "usr_demo_01",
-      "bagId": "bag_demo_01",
-      "bagName": "My College Bag",
-      "timestamp": "2026-09-06T10:58:43.365Z",
-      "source": "RC522 Proximity Reader",
-      "scannedUids": [
-        "E2801160",
-        "5D88C94B",
-        "C390E41A",
-        "7F3E2A10",
-        "A1B2C3D4"
-      ],
-      "presentCount": 5,
-      "totalExpected": 5,
-      "isAllPresent": true,
-      "missingItems": [],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
-    {
-      "id": "scan_1788692307179",
-      "userId": "usr_demo_01",
-      "bagId": "bag_demo_01",
-      "bagName": "My College Bag",
-      "timestamp": "2026-09-06T10:58:27.179Z",
-      "source": "RC522 Proximity Reader",
-      "scannedUids": [
-        "E2801160",
-        "5D88C94B",
-        "C390E41A",
-        "7F3E2A10"
-      ],
-      "presentCount": 4,
-      "totalExpected": 5,
-      "isAllPresent": false,
-      "missingItems": [
-        {
-          "id": "item_04",
-          "name": "Notebook",
-          "rfidUid": "A1B2C3D4",
-          "importance": "medium"
-        }
-      ],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
-    {
-      "id": "scan_1788690496173",
-      "userId": "usr_1788690496161_4898",
-      "bagId": "bag_1788690496166",
-      "bagName": "Work Tech Backpack",
-      "timestamp": "2026-09-06T10:28:16.173Z",
-      "source": "RC522 Proximity Tap",
-      "scannedUids": [
-        "AA11BB22",
-        "UNKNOWN_TAG_999"
-      ],
-      "presentCount": 1,
-      "totalExpected": 4,
-      "isAllPresent": false,
-      "missingItems": [
-        {
-          "id": "item_1788690496167_637",
-          "name": "Office Security Pass",
-          "rfidUid": "CC33DD44",
-          "importance": "critical"
-        },
-        {
-          "id": "item_1788690496167_834",
-          "name": "Laptop Charger",
-          "rfidUid": "EE55FF66",
-          "importance": "medium"
-        },
-        {
-          "id": "item_1788690496167_791",
-          "name": "House Keys",
-          "rfidUid": "11223344",
-          "importance": "critical"
-        }
-      ],
-      "unknownUids": [
-        "UNKNOWN_TAG_999"
-      ],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
-    {
-      "id": "scan_1788690496172",
-      "userId": "usr_1788690496161_4898",
-      "bagId": "bag_1788690496166",
-      "bagName": "Work Tech Backpack",
-      "timestamp": "2026-09-06T10:28:16.172Z",
-      "source": "RC522 Proximity Tap",
-      "scannedUids": [
-        "AA11BB22",
-        "CC33DD44",
-        "11223344"
-      ],
-      "presentCount": 3,
-      "totalExpected": 4,
-      "isAllPresent": false,
-      "missingItems": [
-        {
-          "id": "item_1788690496167_834",
-          "name": "Laptop Charger",
-          "rfidUid": "EE55FF66",
-          "importance": "medium"
-        }
-      ],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
-    {
-      "id": "scan_1788690496170",
-      "userId": "usr_1788690496161_4898",
-      "bagId": "bag_1788690496166",
-      "bagName": "Work Tech Backpack",
-      "timestamp": "2026-09-06T10:28:16.170Z",
-      "source": "RC522 Proximity Tap",
-      "scannedUids": [
-        "AA11BB22",
-        "CC33DD44",
-        "EE55FF66",
-        "11223344"
-      ],
-      "presentCount": 4,
-      "totalExpected": 4,
-      "isAllPresent": true,
-      "missingItems": [],
-      "unknownUids": [],
-      "batteryLevel": 94,
-      "isTodayActive": false
-    },
     {
       "id": "scan_01",
       "userId": "usr_demo_01",
       "bagId": "bag_demo_01",
       "bagName": "My College Bag",
-      "timestamp": "2026-09-06T08:28:05.862Z",
+      "timestamp": "2026-09-12T04:30:45.693Z",
       "source": "RC522 Proximity Reader",
       "scannedUids": [
         "E2801160",
@@ -720,119 +520,79 @@
   ],
   "notifications": [
     {
-      "id": "notif_1789147107303",
-      "userId": "usr_demo_01",
-      "type": "missing_item_alert",
-      "recipient": "alex.rivera@example.com",
-      "subject": "Remembering Bag Alert: You might be forgetting something!",
-      "message": "Your bag (My College Bag) appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have everything before leaving!",
-      "missingItems": [
-        "Laptop",
-        "Wallet",
-        "Keys",
-        "Notebook",
-        "Charger"
-      ],
+      "id": "notif_1789195000704_791",
+      "userId": "usr_1789194960017_1254",
+      "type": "BAG_CLOSED",
+      "title": "Bag Closed",
+      "message": "Your backpack was closed.",
+      "recipient": "murtazajamali07@gmail.com",
+      "data": {
+        "event": "BAG_CLOSED",
+        "hardwareId": "ESP32-BAG-01",
+        "timestamp": "2026-09-12T06:36:40.667Z"
+      },
       "status": "delivered",
-      "timestamp": "2026-09-11T17:18:27.303Z"
+      "timestamp": "2026-09-12T06:36:40.704Z"
     },
     {
-      "id": "notif_1789147106619",
-      "userId": "usr_demo_01",
-      "type": "missing_item_alert",
-      "recipient": "alex.rivera@example.com",
-      "subject": "Remembering Bag Alert: You might be forgetting something!",
-      "message": "Your bag (My College Bag) appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have everything before leaving!",
-      "missingItems": [
-        "Laptop",
-        "Wallet",
-        "Keys",
-        "Notebook",
-        "Charger"
-      ],
+      "id": "notif_1789194975586_379",
+      "userId": "usr_1789194960017_1254",
+      "type": "BAG_OPENED",
+      "title": "Bag Opened",
+      "message": "Your backpack was opened.",
+      "recipient": "murtazajamali07@gmail.com",
+      "data": {
+        "event": "BAG_OPENED",
+        "hardwareId": "ESP32-BAG-01",
+        "timestamp": "2026-09-12T06:36:15.583Z"
+      },
       "status": "delivered",
-      "timestamp": "2026-09-11T17:18:26.619Z"
+      "timestamp": "2026-09-12T06:36:15.586Z"
     },
     {
-      "id": "notif_1789147105904",
+      "id": "notif_1789194932359_436",
       "userId": "usr_demo_01",
-      "type": "missing_item_alert",
+      "type": "BAG_OPENED",
+      "title": "Bag Opened",
+      "message": "Your backpack was opened.",
       "recipient": "alex.rivera@example.com",
-      "subject": "Remembering Bag Alert: You might be forgetting something!",
-      "message": "Your bag (My College Bag) appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have everything before leaving!",
-      "missingItems": [
-        "Laptop",
-        "Wallet",
-        "Keys",
-        "Notebook",
-        "Charger"
-      ],
+      "data": {
+        "event": "BAG_OPENED",
+        "hardwareId": "ESP32-BAG-01",
+        "timestamp": "2026-09-12T06:35:31.454Z"
+      },
       "status": "delivered",
-      "timestamp": "2026-09-11T17:18:25.904Z"
+      "timestamp": "2026-09-12T06:35:32.359Z"
     },
     {
-      "id": "notif_1789147104819",
+      "id": "notif_1789194797308_561",
       "userId": "usr_demo_01",
-      "type": "missing_item_alert",
+      "type": "BAG_CLOSED",
+      "title": "Bag Closed",
+      "message": "Your backpack was closed.",
       "recipient": "alex.rivera@example.com",
-      "subject": "Remembering Bag Alert: You might be forgetting something!",
-      "message": "Your bag (My College Bag) appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have everything before leaving!",
-      "missingItems": [
-        "Laptop",
-        "Wallet",
-        "Keys",
-        "Notebook",
-        "Charger"
-      ],
+      "data": {
+        "event": "BAG_CLOSED",
+        "hardwareId": null,
+        "timestamp": "2026-09-12T06:33:17.308Z"
+      },
       "status": "delivered",
-      "timestamp": "2026-09-11T17:18:24.819Z"
+      "timestamp": "2026-09-12T06:33:17.308Z"
     },
     {
-      "id": "notif_1789144109360",
+      "id": "notif_1789194797229_110",
       "userId": "usr_demo_01",
-      "type": "missing_item_alert",
+      "type": "BAG_OPENED",
+      "title": "Bag Opened",
+      "message": "Your backpack was opened.",
       "recipient": "alex.rivera@example.com",
-      "subject": "Remembering Bag Alert: You might be forgetting something!",
-      "message": "Your bag appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have them before leaving.",
-      "missingItems": [
-        "Laptop",
-        "Wallet",
-        "Keys",
-        "Notebook",
-        "Charger"
-      ],
+      "data": {
+        "event": "BAG_OPENED",
+        "hardwareId": null,
+        "timestamp": "2026-09-12T06:33:17.227Z"
+      },
       "status": "delivered",
-      "timestamp": "2026-09-11T16:28:29.360Z"
-    },
-    {
-      "id": "notif_1789144106854",
-      "userId": "usr_demo_01",
-      "type": "missing_item_alert",
-      "recipient": "alex.rivera@example.com",
-      "subject": "Remembering Bag Alert: You might be forgetting something!",
-      "message": "Your bag appears to be missing: Laptop, Wallet, Keys, Notebook, Charger. Make sure you have them before leaving.",
-      "missingItems": [
-        "Laptop",
-        "Wallet",
-        "Keys",
-        "Notebook",
-        "Charger"
-      ],
-      "status": "delivered",
-      "timestamp": "2026-09-11T16:28:26.854Z"
-    },
-    {
-      "id": "notif_1788690496172",
-      "userId": "usr_1788690496161_4898",
-      "type": "missing_item_alert",
-      "recipient": "sarah.engineer@gmail.com",
-      "subject": "Remembering Bag Alert: You might be forgetting something!",
-      "message": "Your bag appears to be missing: Laptop Charger. Make sure you have it before leaving.",
-      "missingItems": [
-        "Laptop Charger"
-      ],
-      "status": "delivered",
-      "timestamp": "2026-09-06T10:28:16.172Z"
+      "timestamp": "2026-09-12T06:33:17.229Z"
     },
     {
       "id": "notif_01",
@@ -845,7 +605,7 @@
         "Notebook"
       ],
       "status": "delivered",
-      "timestamp": "2026-09-06T08:28:05.862Z"
+      "timestamp": "2026-09-12T04:30:45.693Z"
     }
   ],
   "notificationSettings": [
@@ -853,37 +613,40 @@
       "id": "nset_demo_01",
       "userId": "usr_demo_01",
       "emailEnabled": true,
+      "pushEnabled": true,
       "notifyOnMissing": true,
+      "notifyOnBagEvents": true,
+      "notifyOnItemRemoved": true,
+      "notifyOnReminders": true,
       "dailySummaryEnabled": true,
-      "createdAt": "2026-08-23T10:28:05.862Z",
-      "updatedAt": "2026-09-06T10:28:05.862Z"
+      "createdAt": "2026-08-29T06:30:45.693Z",
+      "updatedAt": "2026-09-12T06:30:45.693Z"
     },
     {
-      "id": "nset_1788690496161",
-      "userId": "usr_1788690496161_4898",
+      "id": "nset_1789194645709",
+      "userId": "goog_firebase_9921",
       "emailEnabled": true,
+      "pushEnabled": true,
       "notifyOnMissing": true,
+      "notifyOnBagEvents": false,
+      "notifyOnItemRemoved": true,
+      "notifyOnReminders": true,
       "dailySummaryEnabled": true,
-      "createdAt": "2026-09-06T10:28:16.161Z",
-      "updatedAt": "2026-09-06T10:28:16.161Z"
+      "createdAt": "2026-09-12T06:30:45.709Z",
+      "updatedAt": "2026-09-12T06:30:45.791Z"
     },
     {
-      "id": "nset_1788690496173",
-      "userId": "usr_1788690496173_1019",
+      "id": "nset_1789194960018",
+      "userId": "usr_1789194960017_1254",
       "emailEnabled": true,
+      "pushEnabled": true,
       "notifyOnMissing": true,
+      "notifyOnBagEvents": true,
+      "notifyOnItemRemoved": true,
+      "notifyOnReminders": true,
       "dailySummaryEnabled": true,
-      "createdAt": "2026-09-06T10:28:16.173Z",
-      "updatedAt": "2026-09-06T10:28:16.173Z"
-    },
-    {
-      "id": "nset_1788690725589",
-      "userId": "usr_1788690725585_4035",
-      "emailEnabled": true,
-      "notifyOnMissing": true,
-      "dailySummaryEnabled": true,
-      "createdAt": "2026-09-06T10:32:05.589Z",
-      "updatedAt": "2026-09-06T10:32:05.589Z"
+      "createdAt": "2026-09-12T06:36:00.018Z",
+      "updatedAt": "2026-09-12T06:36:00.018Z"
     }
   ],
   "lists": [
@@ -893,7 +656,135 @@
       "icon": "graduation-cap",
       "description": "Daily college classes, lectures and labs",
       "is_default": true,
-      "created_at": "2026-08-30T10:28:05.862Z"
+      "created_at": "2026-09-05T06:30:45.693Z"
+    }
+  ],
+  "sentEmails": [
+    {
+      "id": "eml_1789195000718_ea5782",
+      "userId": "usr_demo_01",
+      "type": "BAG_CLOSED",
+      "from": "Remembering Bag <alerts@rememberingbag.iot>",
+      "to": "murtazajamali07@gmail.com",
+      "subject": "🔒 Confirmation: Your Remembering Bag is CLOSED (12:06:40 PM)",
+      "text": "Confirmation: Your Remembering Bag was closed and secured at 12:06:40 PM.",
+      "html": "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Bag Closed Confirmation</title>\n  <style>\n    body { margin: 0; padding: 0; background-color: #050505; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #E2E8F0; }\n    .email-wrapper { max-width: 580px; margin: 20px auto; background: #0E0E0E; border: 1px solid #1E293B; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.8); }\n    .email-header { padding: 24px 30px; background: linear-gradient(180deg, #161B22 0%, #0E0E0E 100%); border-bottom: 1px solid #1E293B; display: flex; align-items: center; justify-content: space-between; }\n    .logo-text { font-size: 16px; font-weight: 800; letter-spacing: 0.05em; color: #FFFFFF; }\n    .logo-accent { color: #00E5FF; }\n    .badge { display: inline-block; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(34, 197, 94, 0.15); color: #4ADE80; border: 1px solid #22C55E; }\n    .email-body { padding: 32px 30px; }\n    .headline { font-size: 22px; font-weight: 700; color: #FFFFFF; margin: 0 0 12px; line-height: 1.3; }\n    .description { font-size: 14px; line-height: 1.6; color: #94A3B8; margin: 0 0 24px; }\n    .info-card { background: #13171F; border: 1px solid #232936; border-radius: 8px; padding: 18px 20px; margin-bottom: 24px; }\n    .info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #1A202C; font-size: 13px; }\n    .info-row:last-child { border-bottom: none; }\n    .info-label { color: #64748B; }\n    .info-value { color: #FFFFFF; font-weight: 600; font-family: monospace; }\n    .btn-action { display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #00E5FF, #00B4D8); color: #030303; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 9999px; text-align: center; }\n    .email-footer { padding: 20px 30px; background: #080A0D; border-top: 1px solid #1A202C; font-size: 12px; color: #475569; text-align: center; }\n  </style>\n</head>\n<body>\n  <div style=\"display: none; max-height: 0px; overflow: hidden;\">Your Remembering Bag was securely closed at 12:06:40 PM.</div>\n  <div class=\"email-wrapper\">\n    <div class=\"email-header\">\n      <div class=\"logo-text\">REMEMBERING <span class=\"logo-accent\">BAG</span></div>\n      <span class=\"badge\">Secured</span>\n    </div>\n    <div class=\"email-body\">\n      \n    <h1 class=\"headline\">🔒 Backpack Secured & Closed</h1>\n    <p class=\"description\">\n      Hello Murtaza Jamali,<br>\n      Your smart backpack zipper sensor confirmed that the bag was <strong>CLOSED & SECURED</strong> at <strong>12:06:40 PM</strong> on Sat, Sep 12, 2026.\n    </p>\n\n    <div class=\"info-card\">\n      <div class=\"info-row\">\n        <span class=\"info-label\">Bag:</span>\n        <span class=\"info-value\">My College Bag</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Status:</span>\n        <span class=\"info-value\" style=\"color: #4ADE80;\">BAG_CLOSED (Secured)</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Hardware Sensor:</span>\n        <span class=\"info-value\">ESP32-BAG-01</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Time:</span>\n        <span class=\"info-value\">12:06:40 PM</span>\n      </div>\n    </div>\n\n    <p style=\"font-size: 13px; color: #94A3B8; margin-bottom: 24px;\">\n      Your RFID antenna is active and monitoring all registered essentials. Have a great, worry-free trip!\n    </p>\n\n    <a href=\"http://localhost:3000/#dashboard\" class=\"btn-action\">Open Remembering Bag Dashboard →</a>\n  \n    </div>\n    <div class=\"email-footer\">\n      <p style=\"margin: 0 0 6px;\">IoT RFID Smart Backpack • Live Telemetry & Security Alerts</p>\n      <p style=\"margin: 0;\">Connected to ESP32 RC522 Reader • Powered by Remembering Bag v2</p>\n    </div>\n  </div>\n</body>\n</html>\n  ",
+      "metadata": {
+        "bagName": "My College Bag",
+        "timestamp": "2026-09-12T06:36:40.704Z",
+        "hardwareId": "ESP32-BAG-01"
+      },
+      "status": "delivered",
+      "deliveryMode": "simulated_local",
+      "timestamp": "2026-09-12T06:36:40.724Z"
+    },
+    {
+      "id": "eml_1789194975603_dbc687",
+      "userId": "usr_demo_01",
+      "type": "BAG_OPENED",
+      "from": "Remembering Bag <alerts@rememberingbag.iot>",
+      "to": "murtazajamali07@gmail.com",
+      "subject": "⚠️ Alert: Your Remembering Bag was OPENED (12:06:15 PM)",
+      "text": "Alert: Your Remembering Bag (My College Bag) was OPENED at 12:06:15 PM. Check your belongings on your dashboard.",
+      "html": "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Bag Opened Alert</title>\n  <style>\n    body { margin: 0; padding: 0; background-color: #050505; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #E2E8F0; }\n    .email-wrapper { max-width: 580px; margin: 20px auto; background: #0E0E0E; border: 1px solid #1E293B; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.8); }\n    .email-header { padding: 24px 30px; background: linear-gradient(180deg, #161B22 0%, #0E0E0E 100%); border-bottom: 1px solid #1E293B; display: flex; align-items: center; justify-content: space-between; }\n    .logo-text { font-size: 16px; font-weight: 800; letter-spacing: 0.05em; color: #FFFFFF; }\n    .logo-accent { color: #00E5FF; }\n    .badge { display: inline-block; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid #EF4444; }\n    .email-body { padding: 32px 30px; }\n    .headline { font-size: 22px; font-weight: 700; color: #FFFFFF; margin: 0 0 12px; line-height: 1.3; }\n    .description { font-size: 14px; line-height: 1.6; color: #94A3B8; margin: 0 0 24px; }\n    .info-card { background: #13171F; border: 1px solid #232936; border-radius: 8px; padding: 18px 20px; margin-bottom: 24px; }\n    .info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #1A202C; font-size: 13px; }\n    .info-row:last-child { border-bottom: none; }\n    .info-label { color: #64748B; }\n    .info-value { color: #FFFFFF; font-weight: 600; font-family: monospace; }\n    .btn-action { display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #00E5FF, #00B4D8); color: #030303; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 9999px; text-align: center; }\n    .email-footer { padding: 20px 30px; background: #080A0D; border-top: 1px solid #1A202C; font-size: 12px; color: #475569; text-align: center; }\n  </style>\n</head>\n<body>\n  <div style=\"display: none; max-height: 0px; overflow: hidden;\">Your Remembering Bag was opened at 12:06:15 PM.</div>\n  <div class=\"email-wrapper\">\n    <div class=\"email-header\">\n      <div class=\"logo-text\">REMEMBERING <span class=\"logo-accent\">BAG</span></div>\n      <span class=\"badge\">Security Alert</span>\n    </div>\n    <div class=\"email-body\">\n      \n    <h1 class=\"headline\">⚠️ Your Backpack Was Opened</h1>\n    <p class=\"description\">\n      Hello Murtaza Jamali,<br>\n      Your smart backpack zipper sensor detected that the bag was <strong>OPENED</strong> at <strong>12:06:15 PM</strong> on Sat, Sep 12, 2026.\n    </p>\n\n    <div class=\"info-card\">\n      <div class=\"info-row\">\n        <span class=\"info-label\">Bag:</span>\n        <span class=\"info-value\">My College Bag</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Event:</span>\n        <span class=\"info-value\" style=\"color: #F87171;\">BAG_OPENED</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Hardware Sensor:</span>\n        <span class=\"info-value\">ESP32-BAG-01</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Detection Time:</span>\n        <span class=\"info-value\">12:06:15 PM</span>\n      </div>\n    </div>\n\n    <p style=\"font-size: 13px; color: #94A3B8; margin-bottom: 24px;\">\n      If you did not open your bag or left it unattended in a public area, please verify your belongings immediately.\n    </p>\n\n    <a href=\"http://localhost:3000/#dashboard\" class=\"btn-action\">Check Bag Inventory on Dashboard →</a>\n  \n    </div>\n    <div class=\"email-footer\">\n      <p style=\"margin: 0 0 6px;\">IoT RFID Smart Backpack • Live Telemetry & Security Alerts</p>\n      <p style=\"margin: 0;\">Connected to ESP32 RC522 Reader • Powered by Remembering Bag v2</p>\n    </div>\n  </div>\n</body>\n</html>\n  ",
+      "metadata": {
+        "bagName": "My College Bag",
+        "timestamp": "2026-09-12T06:36:15.586Z",
+        "hardwareId": "ESP32-BAG-01"
+      },
+      "status": "delivered",
+      "deliveryMode": "simulated_local",
+      "timestamp": "2026-09-12T06:36:15.603Z"
+    },
+    {
+      "id": "eml_1789194932418_4af114",
+      "userId": "usr_demo_01",
+      "type": "BAG_OPENED",
+      "from": "Remembering Bag <alerts@rememberingbag.iot>",
+      "to": "alex.rivera@example.com",
+      "subject": "⚠️ Alert: Your Remembering Bag was OPENED (12:05:32 PM)",
+      "text": "Alert: Your Remembering Bag (My College Bag) was OPENED at 12:05:32 PM. Check your belongings on your dashboard.",
+      "html": "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Bag Opened Alert</title>\n  <style>\n    body { margin: 0; padding: 0; background-color: #050505; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #E2E8F0; }\n    .email-wrapper { max-width: 580px; margin: 20px auto; background: #0E0E0E; border: 1px solid #1E293B; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.8); }\n    .email-header { padding: 24px 30px; background: linear-gradient(180deg, #161B22 0%, #0E0E0E 100%); border-bottom: 1px solid #1E293B; display: flex; align-items: center; justify-content: space-between; }\n    .logo-text { font-size: 16px; font-weight: 800; letter-spacing: 0.05em; color: #FFFFFF; }\n    .logo-accent { color: #00E5FF; }\n    .badge { display: inline-block; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid #EF4444; }\n    .email-body { padding: 32px 30px; }\n    .headline { font-size: 22px; font-weight: 700; color: #FFFFFF; margin: 0 0 12px; line-height: 1.3; }\n    .description { font-size: 14px; line-height: 1.6; color: #94A3B8; margin: 0 0 24px; }\n    .info-card { background: #13171F; border: 1px solid #232936; border-radius: 8px; padding: 18px 20px; margin-bottom: 24px; }\n    .info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #1A202C; font-size: 13px; }\n    .info-row:last-child { border-bottom: none; }\n    .info-label { color: #64748B; }\n    .info-value { color: #FFFFFF; font-weight: 600; font-family: monospace; }\n    .btn-action { display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #00E5FF, #00B4D8); color: #030303; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 9999px; text-align: center; }\n    .email-footer { padding: 20px 30px; background: #080A0D; border-top: 1px solid #1A202C; font-size: 12px; color: #475569; text-align: center; }\n  </style>\n</head>\n<body>\n  <div style=\"display: none; max-height: 0px; overflow: hidden;\">Your Remembering Bag was opened at 12:05:32 PM.</div>\n  <div class=\"email-wrapper\">\n    <div class=\"email-header\">\n      <div class=\"logo-text\">REMEMBERING <span class=\"logo-accent\">BAG</span></div>\n      <span class=\"badge\">Security Alert</span>\n    </div>\n    <div class=\"email-body\">\n      \n    <h1 class=\"headline\">⚠️ Your Backpack Was Opened</h1>\n    <p class=\"description\">\n      Hello Alex Rivera,<br>\n      Your smart backpack zipper sensor detected that the bag was <strong>OPENED</strong> at <strong>12:05:32 PM</strong> on Sat, Sep 12, 2026.\n    </p>\n\n    <div class=\"info-card\">\n      <div class=\"info-row\">\n        <span class=\"info-label\">Bag:</span>\n        <span class=\"info-value\">My College Bag</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Event:</span>\n        <span class=\"info-value\" style=\"color: #F87171;\">BAG_OPENED</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Hardware Sensor:</span>\n        <span class=\"info-value\">ESP32-BAG-01</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Detection Time:</span>\n        <span class=\"info-value\">12:05:32 PM</span>\n      </div>\n    </div>\n\n    <p style=\"font-size: 13px; color: #94A3B8; margin-bottom: 24px;\">\n      If you did not open your bag or left it unattended in a public area, please verify your belongings immediately.\n    </p>\n\n    <a href=\"http://localhost:3000/#dashboard\" class=\"btn-action\">Check Bag Inventory on Dashboard →</a>\n  \n    </div>\n    <div class=\"email-footer\">\n      <p style=\"margin: 0 0 6px;\">IoT RFID Smart Backpack • Live Telemetry & Security Alerts</p>\n      <p style=\"margin: 0;\">Connected to ESP32 RC522 Reader • Powered by Remembering Bag v2</p>\n    </div>\n  </div>\n</body>\n</html>\n  ",
+      "metadata": {
+        "bagName": "My College Bag",
+        "timestamp": "2026-09-12T06:35:32.359Z",
+        "hardwareId": "ESP32-BAG-01"
+      },
+      "status": "delivered",
+      "deliveryMode": "simulated_local",
+      "timestamp": "2026-09-12T06:35:32.437Z"
+    },
+    {
+      "id": "eml_1789194797330_4caa18",
+      "userId": "usr_demo_01",
+      "type": "REMINDER_FIRED",
+      "from": "Remembering Bag <alerts@rememberingbag.iot>",
+      "to": "murtazajamali07@gmail.com",
+      "subject": "⏰ Reminder: Don't forget to pack Laptop Charger!",
+      "text": "Packing Reminder: Laptop Charger. Pack charger before leaving for evening lab!",
+      "html": "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Packing Reminder Alert</title>\n  <style>\n    body { margin: 0; padding: 0; background-color: #050505; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #E2E8F0; }\n    .email-wrapper { max-width: 580px; margin: 20px auto; background: #0E0E0E; border: 1px solid #1E293B; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.8); }\n    .email-header { padding: 24px 30px; background: linear-gradient(180deg, #161B22 0%, #0E0E0E 100%); border-bottom: 1px solid #1E293B; display: flex; align-items: center; justify-content: space-between; }\n    .logo-text { font-size: 16px; font-weight: 800; letter-spacing: 0.05em; color: #FFFFFF; }\n    .logo-accent { color: #00E5FF; }\n    .badge { display: inline-block; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(0, 229, 255, 0.15); color: #00E5FF; border: 1px solid #00E5FF; }\n    .email-body { padding: 32px 30px; }\n    .headline { font-size: 22px; font-weight: 700; color: #FFFFFF; margin: 0 0 12px; line-height: 1.3; }\n    .description { font-size: 14px; line-height: 1.6; color: #94A3B8; margin: 0 0 24px; }\n    .info-card { background: #13171F; border: 1px solid #232936; border-radius: 8px; padding: 18px 20px; margin-bottom: 24px; }\n    .info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #1A202C; font-size: 13px; }\n    .info-row:last-child { border-bottom: none; }\n    .info-label { color: #64748B; }\n    .info-value { color: #FFFFFF; font-weight: 600; font-family: monospace; }\n    .btn-action { display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #00E5FF, #00B4D8); color: #030303; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 9999px; text-align: center; }\n    .email-footer { padding: 20px 30px; background: #080A0D; border-top: 1px solid #1A202C; font-size: 12px; color: #475569; text-align: center; }\n  </style>\n</head>\n<body>\n  <div style=\"display: none; max-height: 0px; overflow: hidden;\">Reminder: Don't forget to pack Laptop Charger!</div>\n  <div class=\"email-wrapper\">\n    <div class=\"email-header\">\n      <div class=\"logo-text\">REMEMBERING <span class=\"logo-accent\">BAG</span></div>\n      <span class=\"badge\">Packing Reminder</span>\n    </div>\n    <div class=\"email-body\">\n      \n    <h1 class=\"headline\">⏰ Don't Forget to Pack: Laptop Charger</h1>\n    <p class=\"description\">\n      Hello Alex Rivera,<br>\n      This is your scheduled packing reminder for <strong>Laptop Charger</strong>.\n    </p>\n\n    <div class=\"info-card\" style=\"border-left: 4px solid #00E5FF;\">\n      <div style=\"font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 8px;\">Reminder Note:</div>\n      <div style=\"font-size: 13px; color: #E2E8F0; line-height: 1.5; font-style: italic;\">\n        \"Pack charger before leaving for evening lab!\"\n      </div>\n    </div>\n\n    <div class=\"info-card\">\n      <div class=\"info-row\">\n        <span class=\"info-label\">Item to Pack:</span>\n        <span class=\"info-value\" style=\"color: #00E5FF;\">Laptop Charger</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Target Bag:</span>\n        <span class=\"info-value\">My College Bag</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Scheduled Time:</span>\n        <span class=\"info-value\">12:03 PM</span>\n      </div>\n    </div>\n\n    <a href=\"http://localhost:3000/#dashboard\" class=\"btn-action\">Check Bag & Confirm Packed →</a>\n  \n    </div>\n    <div class=\"email-footer\">\n      <p style=\"margin: 0 0 6px;\">IoT RFID Smart Backpack • Live Telemetry & Security Alerts</p>\n      <p style=\"margin: 0;\">Connected to ESP32 RC522 Reader • Powered by Remembering Bag v2</p>\n    </div>\n  </div>\n</body>\n</html>\n  ",
+      "metadata": {
+        "itemName": "Laptop Charger",
+        "reminderMessage": "Pack charger before leaving for evening lab!",
+        "dueTime": "2026-09-12T06:33:17.330Z"
+      },
+      "status": "delivered",
+      "deliveryMode": "simulated_local",
+      "timestamp": "2026-09-12T06:33:17.330Z"
+    },
+    {
+      "id": "eml_1789194797309_42515d",
+      "userId": "usr_demo_01",
+      "type": "BAG_CLOSED",
+      "from": "Remembering Bag <alerts@rememberingbag.iot>",
+      "to": "alex.rivera@example.com",
+      "subject": "🔒 Confirmation: Your Remembering Bag is CLOSED (12:03:17 PM)",
+      "text": "Confirmation: Your Remembering Bag was closed and secured at 12:03:17 PM.",
+      "html": "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Bag Closed Confirmation</title>\n  <style>\n    body { margin: 0; padding: 0; background-color: #050505; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #E2E8F0; }\n    .email-wrapper { max-width: 580px; margin: 20px auto; background: #0E0E0E; border: 1px solid #1E293B; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.8); }\n    .email-header { padding: 24px 30px; background: linear-gradient(180deg, #161B22 0%, #0E0E0E 100%); border-bottom: 1px solid #1E293B; display: flex; align-items: center; justify-content: space-between; }\n    .logo-text { font-size: 16px; font-weight: 800; letter-spacing: 0.05em; color: #FFFFFF; }\n    .logo-accent { color: #00E5FF; }\n    .badge { display: inline-block; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(34, 197, 94, 0.15); color: #4ADE80; border: 1px solid #22C55E; }\n    .email-body { padding: 32px 30px; }\n    .headline { font-size: 22px; font-weight: 700; color: #FFFFFF; margin: 0 0 12px; line-height: 1.3; }\n    .description { font-size: 14px; line-height: 1.6; color: #94A3B8; margin: 0 0 24px; }\n    .info-card { background: #13171F; border: 1px solid #232936; border-radius: 8px; padding: 18px 20px; margin-bottom: 24px; }\n    .info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #1A202C; font-size: 13px; }\n    .info-row:last-child { border-bottom: none; }\n    .info-label { color: #64748B; }\n    .info-value { color: #FFFFFF; font-weight: 600; font-family: monospace; }\n    .btn-action { display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #00E5FF, #00B4D8); color: #030303; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 9999px; text-align: center; }\n    .email-footer { padding: 20px 30px; background: #080A0D; border-top: 1px solid #1A202C; font-size: 12px; color: #475569; text-align: center; }\n  </style>\n</head>\n<body>\n  <div style=\"display: none; max-height: 0px; overflow: hidden;\">Your Remembering Bag was securely closed at 12:03:17 PM.</div>\n  <div class=\"email-wrapper\">\n    <div class=\"email-header\">\n      <div class=\"logo-text\">REMEMBERING <span class=\"logo-accent\">BAG</span></div>\n      <span class=\"badge\">Secured</span>\n    </div>\n    <div class=\"email-body\">\n      \n    <h1 class=\"headline\">🔒 Backpack Secured & Closed</h1>\n    <p class=\"description\">\n      Hello Alex Rivera,<br>\n      Your smart backpack zipper sensor confirmed that the bag was <strong>CLOSED & SECURED</strong> at <strong>12:03:17 PM</strong> on Sat, Sep 12, 2026.\n    </p>\n\n    <div class=\"info-card\">\n      <div class=\"info-row\">\n        <span class=\"info-label\">Bag:</span>\n        <span class=\"info-value\">My College Bag</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Status:</span>\n        <span class=\"info-value\" style=\"color: #4ADE80;\">BAG_CLOSED (Secured)</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Hardware Sensor:</span>\n        <span class=\"info-value\">ESP32-BAG-01</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Time:</span>\n        <span class=\"info-value\">12:03:17 PM</span>\n      </div>\n    </div>\n\n    <p style=\"font-size: 13px; color: #94A3B8; margin-bottom: 24px;\">\n      Your RFID antenna is active and monitoring all registered essentials. Have a great, worry-free trip!\n    </p>\n\n    <a href=\"http://localhost:3000/#dashboard\" class=\"btn-action\">Open Remembering Bag Dashboard →</a>\n  \n    </div>\n    <div class=\"email-footer\">\n      <p style=\"margin: 0 0 6px;\">IoT RFID Smart Backpack • Live Telemetry & Security Alerts</p>\n      <p style=\"margin: 0;\">Connected to ESP32 RC522 Reader • Powered by Remembering Bag v2</p>\n    </div>\n  </div>\n</body>\n</html>\n  ",
+      "metadata": {
+        "bagName": "My College Bag",
+        "timestamp": "2026-09-12T06:33:17.308Z",
+        "hardwareId": "ESP32-BAG-01"
+      },
+      "status": "delivered",
+      "deliveryMode": "simulated_local",
+      "timestamp": "2026-09-12T06:33:17.309Z"
+    },
+    {
+      "id": "eml_1789194797274_37a1a0",
+      "userId": "usr_demo_01",
+      "type": "BAG_OPENED",
+      "from": "Remembering Bag <alerts@rememberingbag.iot>",
+      "to": "alex.rivera@example.com",
+      "subject": "⚠️ Alert: Your Remembering Bag was OPENED (12:03:17 PM)",
+      "text": "Alert: Your Remembering Bag (My College Bag) was OPENED at 12:03:17 PM. Check your belongings on your dashboard.",
+      "html": "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Bag Opened Alert</title>\n  <style>\n    body { margin: 0; padding: 0; background-color: #050505; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #E2E8F0; }\n    .email-wrapper { max-width: 580px; margin: 20px auto; background: #0E0E0E; border: 1px solid #1E293B; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.8); }\n    .email-header { padding: 24px 30px; background: linear-gradient(180deg, #161B22 0%, #0E0E0E 100%); border-bottom: 1px solid #1E293B; display: flex; align-items: center; justify-content: space-between; }\n    .logo-text { font-size: 16px; font-weight: 800; letter-spacing: 0.05em; color: #FFFFFF; }\n    .logo-accent { color: #00E5FF; }\n    .badge { display: inline-block; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid #EF4444; }\n    .email-body { padding: 32px 30px; }\n    .headline { font-size: 22px; font-weight: 700; color: #FFFFFF; margin: 0 0 12px; line-height: 1.3; }\n    .description { font-size: 14px; line-height: 1.6; color: #94A3B8; margin: 0 0 24px; }\n    .info-card { background: #13171F; border: 1px solid #232936; border-radius: 8px; padding: 18px 20px; margin-bottom: 24px; }\n    .info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #1A202C; font-size: 13px; }\n    .info-row:last-child { border-bottom: none; }\n    .info-label { color: #64748B; }\n    .info-value { color: #FFFFFF; font-weight: 600; font-family: monospace; }\n    .btn-action { display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #00E5FF, #00B4D8); color: #030303; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 9999px; text-align: center; }\n    .email-footer { padding: 20px 30px; background: #080A0D; border-top: 1px solid #1A202C; font-size: 12px; color: #475569; text-align: center; }\n  </style>\n</head>\n<body>\n  <div style=\"display: none; max-height: 0px; overflow: hidden;\">Your Remembering Bag was opened at 12:03:17 PM.</div>\n  <div class=\"email-wrapper\">\n    <div class=\"email-header\">\n      <div class=\"logo-text\">REMEMBERING <span class=\"logo-accent\">BAG</span></div>\n      <span class=\"badge\">Security Alert</span>\n    </div>\n    <div class=\"email-body\">\n      \n    <h1 class=\"headline\">⚠️ Your Backpack Was Opened</h1>\n    <p class=\"description\">\n      Hello Alex Rivera,<br>\n      Your smart backpack zipper sensor detected that the bag was <strong>OPENED</strong> at <strong>12:03:17 PM</strong> on Sat, Sep 12, 2026.\n    </p>\n\n    <div class=\"info-card\">\n      <div class=\"info-row\">\n        <span class=\"info-label\">Bag:</span>\n        <span class=\"info-value\">My College Bag</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Event:</span>\n        <span class=\"info-value\" style=\"color: #F87171;\">BAG_OPENED</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Hardware Sensor:</span>\n        <span class=\"info-value\">ESP32-BAG-01</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Detection Time:</span>\n        <span class=\"info-value\">12:03:17 PM</span>\n      </div>\n    </div>\n\n    <p style=\"font-size: 13px; color: #94A3B8; margin-bottom: 24px;\">\n      If you did not open your bag or left it unattended in a public area, please verify your belongings immediately.\n    </p>\n\n    <a href=\"http://localhost:3000/#dashboard\" class=\"btn-action\">Check Bag Inventory on Dashboard →</a>\n  \n    </div>\n    <div class=\"email-footer\">\n      <p style=\"margin: 0 0 6px;\">IoT RFID Smart Backpack • Live Telemetry & Security Alerts</p>\n      <p style=\"margin: 0;\">Connected to ESP32 RC522 Reader • Powered by Remembering Bag v2</p>\n    </div>\n  </div>\n</body>\n</html>\n  ",
+      "metadata": {
+        "bagName": "My College Bag",
+        "timestamp": "2026-09-12T06:33:17.229Z",
+        "hardwareId": "ESP32-BAG-01"
+      },
+      "status": "delivered",
+      "deliveryMode": "simulated_local",
+      "timestamp": "2026-09-12T06:33:17.274Z"
+    },
+    {
+      "id": "eml_1789194667200_523eeb",
+      "userId": "usr_demo_01",
+      "type": "REMINDER_FIRED",
+      "from": "Remembering Bag <alerts@rememberingbag.iot>",
+      "to": "alex.rivera@example.com",
+      "subject": "⏰ Reminder: Don't forget to pack Laptop Charger!",
+      "text": "Packing Reminder: Laptop Charger. Pack charger before leaving for evening lab!",
+      "html": "\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Packing Reminder Alert</title>\n  <style>\n    body { margin: 0; padding: 0; background-color: #050505; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #E2E8F0; }\n    .email-wrapper { max-width: 580px; margin: 20px auto; background: #0E0E0E; border: 1px solid #1E293B; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.8); }\n    .email-header { padding: 24px 30px; background: linear-gradient(180deg, #161B22 0%, #0E0E0E 100%); border-bottom: 1px solid #1E293B; display: flex; align-items: center; justify-content: space-between; }\n    .logo-text { font-size: 16px; font-weight: 800; letter-spacing: 0.05em; color: #FFFFFF; }\n    .logo-accent { color: #00E5FF; }\n    .badge { display: inline-block; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: rgba(0, 229, 255, 0.15); color: #00E5FF; border: 1px solid #00E5FF; }\n    .email-body { padding: 32px 30px; }\n    .headline { font-size: 22px; font-weight: 700; color: #FFFFFF; margin: 0 0 12px; line-height: 1.3; }\n    .description { font-size: 14px; line-height: 1.6; color: #94A3B8; margin: 0 0 24px; }\n    .info-card { background: #13171F; border: 1px solid #232936; border-radius: 8px; padding: 18px 20px; margin-bottom: 24px; }\n    .info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #1A202C; font-size: 13px; }\n    .info-row:last-child { border-bottom: none; }\n    .info-label { color: #64748B; }\n    .info-value { color: #FFFFFF; font-weight: 600; font-family: monospace; }\n    .btn-action { display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #00E5FF, #00B4D8); color: #030303; font-weight: 700; font-size: 14px; text-decoration: none; border-radius: 9999px; text-align: center; }\n    .email-footer { padding: 20px 30px; background: #080A0D; border-top: 1px solid #1A202C; font-size: 12px; color: #475569; text-align: center; }\n  </style>\n</head>\n<body>\n  <div style=\"display: none; max-height: 0px; overflow: hidden;\">Reminder: Don't forget to pack Laptop Charger!</div>\n  <div class=\"email-wrapper\">\n    <div class=\"email-header\">\n      <div class=\"logo-text\">REMEMBERING <span class=\"logo-accent\">BAG</span></div>\n      <span class=\"badge\">Packing Reminder</span>\n    </div>\n    <div class=\"email-body\">\n      \n    <h1 class=\"headline\">⏰ Don't Forget to Pack: Laptop Charger</h1>\n    <p class=\"description\">\n      Hello Alex Rivera,<br>\n      This is your scheduled packing reminder for <strong>Laptop Charger</strong>.\n    </p>\n\n    <div class=\"info-card\" style=\"border-left: 4px solid #00E5FF;\">\n      <div style=\"font-size: 14px; font-weight: 600; color: #FFFFFF; margin-bottom: 8px;\">Reminder Note:</div>\n      <div style=\"font-size: 13px; color: #E2E8F0; line-height: 1.5; font-style: italic;\">\n        \"Pack charger before leaving for evening lab!\"\n      </div>\n    </div>\n\n    <div class=\"info-card\">\n      <div class=\"info-row\">\n        <span class=\"info-label\">Item to Pack:</span>\n        <span class=\"info-value\" style=\"color: #00E5FF;\">Laptop Charger</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Target Bag:</span>\n        <span class=\"info-value\">My College Bag</span>\n      </div>\n      <div class=\"info-row\">\n        <span class=\"info-label\">Scheduled Time:</span>\n        <span class=\"info-value\">12:01 PM</span>\n      </div>\n    </div>\n\n    <a href=\"http://localhost:3000/#dashboard\" class=\"btn-action\">Check Bag & Confirm Packed →</a>\n  \n    </div>\n    <div class=\"email-footer\">\n      <p style=\"margin: 0 0 6px;\">IoT RFID Smart Backpack • Live Telemetry & Security Alerts</p>\n      <p style=\"margin: 0;\">Connected to ESP32 RC522 Reader • Powered by Remembering Bag v2</p>\n    </div>\n  </div>\n</body>\n</html>\n  ",
+      "metadata": {
+        "itemName": "Laptop Charger",
+        "reminderMessage": "Pack charger before leaving for evening lab!",
+        "dueTime": "2026-09-12T06:31:07.200Z"
+      },
+      "status": "delivered",
+      "deliveryMode": "simulated_local",
+      "timestamp": "2026-09-12T06:31:07.200Z"
     }
   ]
 }
